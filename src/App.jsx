@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Book from "./Book.jsx";
 
+const App = () => {
   return (
-    <>
-      <div className='text-7xl font-bold underline bg-cyan-500 text-purple-800 shadow-xl animate-bounce'>
-        Hello Swift Dispatch !!!
-      </div>
-    </>
-  )
-}
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/Book" element={<Book />} />
+        </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;
