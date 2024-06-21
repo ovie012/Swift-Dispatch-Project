@@ -45,12 +45,12 @@ function Header() {
           </nav>
           <button className="mobile-click-open" onClick={toggleMobileNav}>
             {/* <img src="./SwiftDispatch - Assets/Landing Page/icon-menu.svg" alt="click for mobile nav"> */}
-            <img src="public/icon-menu.svg" alt="click for mobile nav" />
+            <img src="/icon-menu.svg" alt="click for mobile nav" />
           </button>
           <nav className={`mobile-nav ${isMobileNavOpen ? "active" : ""}`}>
             <button className="mobile-click-close" onClick={toggleMobileNav}>
               {/* <img src="./SwiftDispatch - Assets/Landing Page/icon-menu-close.svg" alt="close nav bar"> */}
-              <img src="public/icon-menu-close.svg" alt="close nav bar" />
+              <img src="/icon-menu-close.svg" alt="close nav bar" />
             </button>
             <ul>
               <li>
