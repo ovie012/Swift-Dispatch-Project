@@ -6,7 +6,7 @@ function Footer () {
                     <div className="footer-logo">
                         <h1>SwiftDispatch</h1>
                         <div>
-                            {/* <img src="./SwiftDispatch - Assets/Real-Time Tracking/gps_place_marker_pointer_location_pin_map_navigation_direction_icon_195752 1.svg" alt="location icon"> */}
+                            <img src="public/LP--FT-Icon-GPS.svg" alt="location icon" />
                             <h6>Nigeria - English</h6>
                         </div>
                     </div>
@@ -30,10 +30,10 @@ function Footer () {
                         <div className="socials">
                             <h6>Follow Us</h6>
                             <div>
-                                {/* <img src="./SwiftDispatch - Assets/Landing Page/FT Icon - Facebook.svg" alt="facebook icon">
-                                <img src="./SwiftDispatch - Assets/Landing Page/FT Icon - YouTube.svg" alt="youtube icon">
-                                <img src="./SwiftDispatch - Assets/Landing Page/FT Icon - Instagram.svg" alt="instagram icon">
-                                <img src="./SwiftDispatch - Assets/Landing Page/FT Icon - LinkedIn.svg" alt="linkedln icon"> */}
+                                <img src="public/LP--FT-Icon-Facebook.svg" alt="facebook icon" />
+                                <img src="public/LP--FT-Icon-YouTube.svg" alt="youtube icon" />
+                                <img src="public/LP--FT-Icon-Instagram.svg" alt="instagram icon" />
+                                <img src="public/LP--FT-Icon-LinkedIn.svg" alt="linkedln icon" />
                             </div>
                         </div>
                     </div>

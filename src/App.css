@@ -85,12 +85,12 @@ main {
         overflow-x: hidden;
     }
 
-    section.banner-section,
+    /* section.banner-section,
     div.mailing,
     div.testimonials,
     div.services {
         display: none;
-    }
+    } */
 
     header nav.nav {
         display: none;
@@ -345,6 +345,7 @@ footer {
 
 .footer-logo h1 {
   font-size: 40px;
+  font-weight: 600;
   color: #DCFFFC;
 }
 
@@ -362,12 +363,15 @@ footer {
 
 .footer-logo div img {
   width: 50px;
+  height: 30px;
+  margin-left: 5%;
   color: hsla(175, 100%, 93%, 0.7);
 }
 
 .footer-logo div h6 {
   font-size: 1.1rem;
   font-weight: 400;
+  margin-right: 7%;
 }
 
 .footer-nav {
@@ -402,6 +406,7 @@ footer {
 .socials h6 {
   text-align: center;
   font-size: 1.1rem;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
@@ -435,7 +440,7 @@ footer {
   }
 
   .footer-logo div h6 {
-      font-size: 1rem;
+      font-size: 0.9rem;
   }
 
   .footer-nav nav ul li {
@@ -457,6 +462,47 @@ footer {
 
   .footer-container aside {
       font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .footer-nav {
+    display: block;
+    position: relative;
+  }
+
+  .footer-nav nav {
+    width: 70%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .socials h6 {
+    display: none;
+  }
+
+  .socials div {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+  }
+
+  .footer-logo div h6 {
+      font-size: 0.9rem;
+  }
+
+  .footer-nav nav ul li {
+      font-size: 0.8rem;
+  }
+
+  .footer-logo h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-logo div {
+    display: none;
   }
 }
 
@@ -485,7 +531,7 @@ footer {
 
 .package-time-text h1 {
   font-size: 3.7rem;
-  font-size: 900;
+  font-weight: 900;
   color: #004039;
 }
 
@@ -538,6 +584,10 @@ footer {
   height: 100%;
   /* height: 420px; */
   border-radius: 20px;
+}
+
+.package-time-img img:nth-of-type(2) {
+  display: none;
 }
 
 .green-text {
@@ -598,7 +648,38 @@ footer {
   }
 }
 
+
+
 @media only screen and (max-width: 800px) {
+
+  .text-with-img h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+ .text-with-img p {
+    font-size: 0.7rem;
+  }
+
+  .package-time-text h1 {
+    font-size: 2rem;
+  }
+
+  .package-time-img {
+    width: 45%;
+    margin-top: 0;
+  }
+
+  .package-time-img img:nth-of-type(2) {
+    display: block;
+  }
+  
+  .package-time-img img:nth-of-type(1) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   
   .package-time {
       display: block;
@@ -610,20 +691,58 @@ footer {
 
   .package-time-text h1 {
       font-size: 1.5rem;
-      margin-bottom: 450px;
+      margin-bottom: 500px;
   }
 
   .package-time-img {
       position: absolute;
-      top: 275px;
-      width: 90%;
+      top: 280px;
+      width: 80%;
+      left: 10%;
+      height: 450px;
   }
+
+  .package-time-img img:nth-of-type(2) {
+    display: block;
+    border-radius: 5px;
+  }
+
+  .package-time-img img:nth-of-type(1) {
+    display: none;
+  }
+
+  .text-with-img {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .text-with-img h4 {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+ .text-with-img p {
+    font-size: 0.6rem;
+    font-weight: 700;
+  }
+
+  .text-with-img div:nth-of-type(2) {
+    margin-top: 18px;
+  }
+
+  .text-with-img div:nth-of-type(1) img {
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+  
 }
 
 /* swift coverage styling  */
 .swift-coverage {
   width: 100%;
   /* height: 70dvh; */
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -631,7 +750,6 @@ footer {
 
 .swift-coverage-container {
   width: 90%;
-  height: 400px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 10%;
@@ -655,17 +773,19 @@ footer {
 .swift-coverage-container div h4 {
   font-size: 1.7rem;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .swift-coverage-container div p {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: hsla(0, 0%, 0%, 0.7);
 }
 
 @media only screen and (max-width:1200px) {
 
   .swift-coverage-container {
-      height: 350;
+      height: 350px;
   }
 
   .swift-coverage-container div h4 {
@@ -678,6 +798,39 @@ footer {
 
   .swift-coverage-container div img {
       width: 35px;
+  }
+}
+
+
+
+@media only screen and (max-width:800px) {
+  div.swift-coverage {
+      height: 650px;
+      padding-bottom: 45%;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .swift-coverage-container div p span {
+    display: none;
+  }
+
+  .swift-coverage-container {
+      height: 650px;
+      padding-bottom: 60%;
+  }
+
+  .swift-coverage-container div h4 {
+      font-size: 1.1rem;
+  }
+
+  .swift-coverage-container div p {
+      font-size: 0.6rem;
+      font-weight: 700;
+  }
+
+  .swift-coverage-container div img {
+      width: 25px;
   }
 }
 
@@ -711,9 +864,9 @@ footer {
   box-shadow: 0 2px 6px -2px #2A9D90;
   border-radius: 15px;
   border: none;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
+  align-items: center;
 }
 
 .boxed-package div img {
@@ -735,6 +888,17 @@ footer {
   font-size: 1.15rem;
   font-weight: 600;
   color: hsla(0, 0%, 0%, 0.7);
+}
+
+@media only screen and (max-width: 800px) {
+
+  .boxed-package {
+    top: -40%;
+  }
+
+  .boxed-package div p br {
+    display: none;
+  }
 }
 
 .list-package {
@@ -781,6 +945,7 @@ footer {
 
 .list-section div h3 {
   font-size: 2.7rem;
+  font-weight: 900;
   color: #004039;
   margin-bottom: 5%;
 }
@@ -835,6 +1000,50 @@ footer {
 
 .quote-button:hover {
   background: hsl(173, 56%, 49%);
+}
+
+@media only screen and (max-width: 800px) {
+  .list-package {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 800px;
+  }
+
+  section.list-section div h3 {
+    width: 100%;
+    font-size: 1.8rem;
+    margin-top: -130px;
+  }
+
+  section.list-section div h3 br {
+    display: none;
+  }
+
+  .list-section div ul li {
+    margin-left: 10%;
+  }
+
+  .list-section div ul li::before {
+    left: -30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .list-section div p {
+    display: none;
+  }
+
+  .boxed-package {
+    margin-top: 0;
+  }
+
+  .banner-section img:nth-of-type(1) {
+    top: -250px;
+  }
+
+  .banner-section img:nth-of-type(2) {
+    top: -330px;
+  }
 }
 
 @media only screen and (max-width:1200px) {
@@ -904,12 +1113,14 @@ footer {
   color: #004039;
   font-size: 1.5rem;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .services-text h2 {
   color: #004039;
   font-size: 2.5rem;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .services-text p {
@@ -943,6 +1154,9 @@ footer {
   text-align: center;
   box-shadow: 0 1px 4px -2px #2A9D90;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .services-img-icons div img {
@@ -971,6 +1185,7 @@ footer {
 
 .tracking h4 {
   font-size: 1.6rem;
+  font-weight: 700;
   color: #004039;
   margin-bottom: 15px;
 }
@@ -997,6 +1212,10 @@ footer {
   height: 100%;
   border-radius: 15px;
   float: left;
+}
+
+.tracking div img:nth-of-type(2) {
+  display: none;
 }
 
 .tracking div form {
@@ -1030,7 +1249,7 @@ footer {
   background: #2A9D90;
   width: 100px;
   height: 50px;
-  padding: 12px;
+  /* padding: 12px; */
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -1038,6 +1257,40 @@ footer {
 
 .tracking div form img:hover {
   background: hsl(173, 56%, 49%);
+}
+
+@media only screen and (max-width: 500px) {
+
+  div.tracking div form {
+    height: 50%;
+    width: 100%;
+  }
+
+  div.tracking div form input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  div.tracking div form img {
+    right: 50px;
+    top: 50px;
+    width: 50px;
+  }
+  
+  div.tracking div {
+    /* display: block; */
+    flex-direction: column;
+    height: 400px;
+    border-radius: 25px;
+  }
+
+  .tracking div img:nth-of-type(1) {
+    display: none;
+  }
+
+  .tracking div img:nth-of-type(2) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .reviews {
@@ -1048,6 +1301,7 @@ footer {
 
 .reviews h4 {
   font-size: 1.85rem;
+  font-weight: 600;
   color: #004039;
   margin-bottom: 20px;
 }
@@ -1057,6 +1311,16 @@ footer {
   color: hsla(0, 0%, 0%, 0.7);
   font-weight: 600;
   margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 500px) {
+  div.reviews h4 {
+    font-size: 1.3rem;
+  }
+
+  div.reviews p {
+    font-size: 0.7rem;
+  }
 }
 
 .testimonials {
@@ -1075,6 +1339,9 @@ footer {
 .testimonials div div {
   margin-top: 15px;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonials div p {
@@ -1086,8 +1353,38 @@ footer {
 
 .testimonials div h6 {
   font-size: 1.15rem;
+  font-weight: 700;
   color: #004039;
   margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  div.testimonials {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.testimonials div h6 {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  div.testimonials div {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  div.testimonials div p {
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  div.testimonials div p br {
+    display: none;
+  }
+
+  
 }
 
 .mailing {
@@ -1101,6 +1398,7 @@ footer {
 
 .mailing h3 {
   font-size: 1.8rem;
+  font-weight: 700;
   color: #004039;
   margin-bottom: 25px;
 }
@@ -1135,7 +1433,7 @@ footer {
   right: 30px;
   width: 90px;
   height: 45px;
-  padding: 12px;
+  /* padding: 8px; */
   background: #2A9D90;
   border-radius: 10px;
 }
@@ -1147,6 +1445,38 @@ footer {
   text-align: center;
   /* margin-left: 50px; */
   /* margin-bottom: 50px; */
+}
+
+@media only screen and (max-width: 500px) {
+
+  div.mailing h3 {
+    font-size: 1.3rem;
+  }
+
+  div.mailing form input {
+    width: 280px;
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  div.mailing form input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  div.mailing form img {
+    height: 35px;
+    right: 20px;
+    padding: 0;
+  }
+
+  div.mailing p {
+    font-size: 0.7rem;
+    width: 80%;
+  }
+
+  div.mailing p br {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1216,6 +1546,7 @@ footer {
 
   .testimonials div p {
       font-size: 0.9rem;
+      margin: 20px 10px;
   }
 
   .testimonials div h6 {
