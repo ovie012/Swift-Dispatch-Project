@@ -13,7 +13,7 @@ function LandingPage() {
                             </h1>
                             <div className="text-with-img">
                                 <div>
-                                    <img src="public/LP--H-Icon-Bike-Secured-&-Swift.svg" alt="Secured and Swift icon" />
+                                    <img src="/LP--H-Icon-Bike-Secured-&-Swift.svg" alt="Secured and Swift icon" />
                                     <h4>Secured and Swift</h4>
                                     <p>
                                         Our Team Ensures your items <br />
@@ -21,7 +21,7 @@ function LandingPage() {
                                     </p>
                                 </div>
                                 <div>
-                                    <img src="public/LP--H-Icon-GPS-Real-Time.svg" alt="Real Time Tracking icon" />
+                                    <img src="/LP--H-Icon-GPS-Real-Time.svg" alt="Real Time Tracking icon" />
                                     <h4>Real Time Tracking</h4>
                                     <p>
                                         Real Time Tracking which allows <br />
@@ -34,30 +34,30 @@ function LandingPage() {
                             </div>
                         </div>
                         <div className="package-time-img">
-                            <img src="public/LP--H-Image-Main-Web-SVG.svg" alt="Package Delivery" />
-                            <img src="public/LP--H-Image-Main-Mobile.png" alt="Package Delivery" />
+                            <img src="/LP--H-Image-Main-Web-SVG.svg" alt="Package Delivery" />
+                            <img src="/LP--H-Image-Main-Mobile.png" alt="Package Delivery" />
                         </div>
                     </div>
                 </div>
                 <div className="swift-coverage">
                     <div className="swift-coverage-container">
                         <div>
-                            <img src="public/LP--VP-Icon-Parcel-Delivered.svg" alt="delivery box icon" />
+                            <img src="/LP--VP-Icon-Parcel-Delivered.svg" alt="delivery box icon" />
                             <h4>848</h4>
                             <p>Parcel Delivered</p>
                         </div>
                         <div>
-                            <img src="public/LP--VP-Icon-Total-Distance-Covered.svg" alt="location icon" />
+                            <img src="/LP--VP-Icon-Total-Distance-Covered.svg" alt="location icon" />
                             <h4>45KM</h4>
                             <p>Total Distance <span>Covered</span></p>
                         </div>
                         <div>
-                            <img src="public/LP--VP-Icon-Happy-Client.svg" alt="people icon" />
+                            <img src="/LP--VP-Icon-Happy-Client.svg" alt="people icon" />
                             <h4>78</h4>
                             <p>Happy Client</p>
                         </div>
                         <div>
-                            <img src="public/LP--VP-Icon-Total-Riders.svg" alt="rider icon" />
+                            <img src="/LP--VP-Icon-Total-Riders.svg" alt="rider icon" />
                             <h4>32</h4>
                             <p>Total Riders</p>
                         </div>
@@ -66,14 +66,14 @@ function LandingPage() {
                 <div className="swift-package">
                     <div className="boxed-package">
                         <div>
-                            <img src="public/LP--VP-Icon-Customer-Support.svg" alt="customer support icon" />
+                            <img src="/LP--VP-Icon-Customer-Support.svg" alt="customer support icon" />
                             <h4>Customer Support</h4>
                             <p>
                                 24/7 Customer Support to inquire <br />about their orders
                             </p>
                         </div>
                         <div>
-                            <img src="public/LP--VP-Icon-Order-Management.svg" alt="online shopping icon" />
+                            <img src="/LP--VP-Icon-Order-Management.svg" alt="online shopping icon" />
                             <h4>Order Management</h4>
                             <p>
                                 Track Status, Place Delivery Order, <br />
@@ -81,7 +81,7 @@ function LandingPage() {
                             </p>
                         </div>
                         <div>
-                            <img src="public/LP--VP-Icon-Real-Time-Tracking.svg" alt="location icon" />
+                            <img src="/LP--VP-Icon-Real-Time-Tracking.svg" alt="location icon" />
                             <h4>Real-Time Tracking</h4>
                             <p>
                                 Live Update on Package location <br />
@@ -91,8 +91,8 @@ function LandingPage() {
                     </div>
                     <div className="list-package">
                         <section className="banner-section">
-                            <img src="public/LP--VP-Image-Black-Rider.svg" alt="delivery driver" />
-                            <img src="public/LP--VP-Image-Lady-Receiver.svg" alt="customer" />
+                            <img src="/LP--VP-Image-Black-Rider.svg" alt="delivery driver" />
+                            <img src="/LP--VP-Image-Lady-Receiver.svg" alt="customer" />
                         </section>
                         <section className="list-section">
                             <div>
@@ -137,21 +137,21 @@ function LandingPage() {
                             <div className="linear-gradient"></div>
                             <div className="services-img-icons">
                                 <div>
-                                    <img src="public/LP--SER-Icon-Door-To-Door.svg" alt="truck icon" />
+                                    <img src="/LP--SER-Icon-Door-To-Door.svg" alt="truck icon" />
                                     <h4>
                                         Door to Door <br />
                                         Delivery
                                     </h4>
                                 </div>
                                 <div>
-                                    <img src="public/LP--SER-Icon-Perishable.svg" alt="delivered icon" />
+                                    <img src="/LP--SER-Icon-Perishable.svg" alt="delivered icon" />
                                     <h4>
                                         Perishable <br />
                                         Good Delivery
                                     </h4>
                                 </div>
                                 <div>
-                                    <img src="public/LP--SER-Icon-Scheduled.svg" alt="truck icon" />
+                                    <img src="/LP--SER-Icon-Scheduled.svg" alt="truck icon" />
                                     <h4>
                                         Scheduled <br />
                                         Delivery
@@ -164,11 +164,11 @@ function LandingPage() {
                         <h4>Real-Time Tracking</h4>
                         <p>Track your deliveries with ease.</p>
                         <div>
-                            <img src="public/LP--RTT-Web-Google-Map.png" alt="map" />
-                            <img src="public/LP--RTT-Mobile-Google-Map.png" alt="map" />
+                            <img src="/LP--RTT-Web-Google-Map.png" alt="map" />
+                            <img src="/LP--RTT-Mobile-Google-Map.png" alt="map" />
                             <form action="post">
                                 <input className="tracking-id" placeholder="Tracking ID" type="text" id="track" name="track" />
-                                <img src="public/LP--RTT-CTA-Go-To.svg" alt="submit icon" />
+                                <img src="/LP--RTT-CTA-Go-To.svg" alt="submit icon" />
                             </form>
                         </div>
                     </div>
@@ -178,11 +178,11 @@ function LandingPage() {
                         <div className="testimonials">
                             <div>
                                 <div>
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
                                 </div>
                                 <p>
                                     SwitchDispatch provides excellent and <br />
@@ -193,11 +193,11 @@ function LandingPage() {
                             </div>
                             <div>
                                 <div>
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
                                 </div>
                                 <p>
                                     It has been a wonderful partnership <br />
@@ -208,11 +208,11 @@ function LandingPage() {
                             </div>
                             <div>
                                 <div>
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
                                 </div>
                                 <p>
                                     I enjoy their prompt services. <br />
@@ -223,11 +223,11 @@ function LandingPage() {
                             </div>
                             <div>
                                 <div>
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
                                 </div>
                                 <p>
                                     All our delivery issues from one state <br />
@@ -238,11 +238,11 @@ function LandingPage() {
                             </div>
                             <div>
                                 <div>
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
                                 </div>
                                 <p>
                                     When it comes to delivery services, <br />
@@ -253,11 +253,11 @@ function LandingPage() {
                             </div>
                             <div>
                                 <div>
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
-                                    <img src="public/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
+                                    <img src="/LP--T&R-Icon-Star.svg" alt="star icon" />
                                 </div>
                                 <p>
                                     Transportation of goods with <br />
@@ -272,7 +272,7 @@ function LandingPage() {
                         <h3>Subscribe to our mailing list</h3>
                         <form action="post">
                             <input type="text" id="mail" name="mail" placeholder="Email Address" />
-                            <img src="public/LP--T&R-CTA-GoTo.svg" alt="arrow icon" />
+                            <img src="/LP--T&R-CTA-GoTo.svg" alt="arrow icon" />
                         </form>
                         <p>
                             By entering your information, You permit us to reach out to you
