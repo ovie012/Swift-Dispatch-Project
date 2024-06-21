@@ -9,12 +9,15 @@ import Book from "./Book.jsx";
 const App = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Routes>
-        <LandingPage/>
+        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/Track" element={<Track />} />
+        <Route path="/Report" element={<Report />} />
+        <Route path="/Payment" element={<Payment />} /> */}
         <Route path="/Book" element={<Book />} />
-        </Routes>
-        <Footer/>
+      </Routes>
+      {/* <Footer /> */}
     </div>
   );
 };

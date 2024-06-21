@@ -1,8 +1,5 @@
 
-.bookbg {
-  background-image: url(public\BP--Image-Dispatch-Rider-Web.png);
-  background-size: contain;
-  
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -233,6 +230,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* color: white; */
 }
 
 header.scrolled {
@@ -253,6 +251,7 @@ nav.nav {
   font-size: 28px;
   font-weight: 900;
   color: #004039;
+  /* color: white; */
   cursor: pointer;
 }
 
@@ -1252,3 +1251,11 @@ footer {
       font-size: 0.95rem;
   }
 }
+
+/* book styling */
+.bookbg {
+background-image: url("/BP--Image-Dispatch-Rider-Web.png");
+border-bottom-left-radius: 5% ;
+  border-bottom-right-radius: 5%;
+}
+
