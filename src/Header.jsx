@@ -67,7 +67,7 @@ function Header() {
                 <Link to="/Report">Report a Rider</Link>
               </li>
               <Link to="/Book">
-                <button className="book-now">Book Now</button>
+                <button className="book-now mobile-book-now">Book Now</button>
               </Link>
             </ul>
           </nav>

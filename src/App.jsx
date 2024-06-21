@@ -9,7 +9,7 @@ import Book from "./Book.jsx";
 const App = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         {/* <Route path="/Track" element={<Track />} />
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/Payment" element={<Payment />} /> */}
         <Route path="/Book" element={<Book />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

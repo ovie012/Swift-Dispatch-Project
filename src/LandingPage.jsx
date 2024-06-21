@@ -1,7 +1,6 @@
 import Header from "./Header";
 
 function LandingPage() {
-<<<<<<< HEAD
     return (
         <>
             <main>
@@ -280,7 +279,11 @@ function LandingPage() {
                             with future <br /> communications.
                         </p>
                     </div>
-=======
+                </div>
+            </main>
+          </>
+    )
+{/* =======
   return (
     <>
     <Header/>
@@ -721,7 +724,7 @@ function LandingPage() {
         </div>
       </main>
     </>
-  );
+  ); */}
 }
 
 export default LandingPage;

@@ -12,10 +12,7 @@
   "dependencies": {
     "date-fns": "^3.6.0",
     "react": "^18.2.0",
-<<<<<<< HEAD
-=======
     "react-datepicker": "^7.1.0",
->>>>>>> 90c36223c243e49d1a349564b8c4a6ce9dbee673
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1"
   },
