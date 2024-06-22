@@ -10,7 +10,12 @@ function Book() {
     <>
       {/* <Header /> */}
       <div className="w-full h-full">
-        <div className="bookbg w-full lg:h-[100vh] h-96 bg-cover bg-center">
+        <div
+          className="bookbg w-full lg:h-[100vh] h-96 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/BP--Image-Dispatch-Rider-Web.png')",
+          }}
+        >
           <div className="text-white top-20 text-shadow-default lg:left-[100px] lg:w-[60%] w-full relative items-center lg:items-start flex flex-col gap-5">
             <h1 className="lg:text-[60px] text-[20px] font-extrabold tracking-wide leading-20">
               We Deliver Packages With Ease!
@@ -21,7 +26,7 @@ function Book() {
           </div>
         </div>
 
-        <div className="relative  flex flex-col lg:gap-15 gap-[1.5rem] lg:mx-20 mx-10 ">
+        <div className="relative  flex flex-col lg:gap-15 gap-[1.5rem] w-[90%] mx-auto ">
           <div className="flex flex-col gap-14">
             <div className="flex flex-col gap-2  relative top-[2rem]">
               <h1 className="lg:text-[30px] text-[20px] font-bold text-[#004039] ">
