@@ -5,6 +5,7 @@ import Footer from './Footer'
 import LandingPage from './LandingPage'
 import { Routes, Route } from "react-router-dom";
 import Book from "./Book.jsx";
+import Report from "./Report.jsx"
 
 const App = () => {
   return (
@@ -12,9 +13,9 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        {/* <Route path="/Track" element={<Track />} />
+        {/* <Route path="/Track" element={<Track />} /> */}
         <Route path="/Report" element={<Report />} />
-        <Route path="/Payment" element={<Payment />} /> */}
+        {/* <Route path="/Payment" element={<Payment />} /> */}
         <Route path="/Book" element={<Book />} />
       </Routes>
       <Footer />

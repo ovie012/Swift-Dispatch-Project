@@ -1,5 +1,4 @@
 import "./App.css";
-import "./App.jsx";
 import BoxIcon from "./assets/BP--Icon-Box-In-&-Out.svg";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -11,12 +10,12 @@ function Book() {
       {/* <Header /> */}
       <div className="w-full h-full">
         <div
-          className="bookbg w-full lg:h-[100vh] h-96 bg-cover bg-center"
+          className="bookbg w-full lg:h-[100vh] h-96 bg-cover bg-center pt-[40px]"
           style={{
             backgroundImage: "url('/BP--Image-Dispatch-Rider-Web.png')",
           }}
         >
-          <div className="text-white top-20 text-shadow-default lg:left-[100px] lg:w-[60%] w-full relative items-center lg:items-start flex flex-col gap-5">
+          <div className="text-white top-20 text-shadow-default lg:left-[60px] lg:w-[60%] w-full relative items-center lg:items-start flex flex-col gap-5">
             <h1 className="lg:text-[60px] text-[20px] font-extrabold tracking-wide leading-20">
               We Deliver Packages With Ease!
             </h1>
