@@ -73,6 +73,7 @@ html::-webkit-scrollbar {
 main {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /* for mobile nav  */
@@ -283,7 +284,8 @@ button.book-now {
 
 nav.nav button:hover,
 button.book-now:hover {
-  background: hsl(173, 56%, 49%);
+  background: #004039;
+  /* background: hsl(173, 56%, 49%); */
 }
 
 /* media query */
@@ -1106,6 +1108,7 @@ footer {
 
   section.banner-section img:nth-of-type(2) {
     top: -230px;
+    /* left: 140px; */
   }
 }
 
@@ -1392,7 +1395,7 @@ footer {
 .tracking div form img {
   position: absolute;
   right: 110px;
-  background: #2A9D90;
+  /* background: #2A9D90; */
   width: 100px;
   height: 50px;
   /* padding: 12px; */
@@ -1401,9 +1404,9 @@ footer {
   transition: 0.2s ease-in-out;
 }
 
-.tracking div form img:hover {
+/* .tracking div form img:hover {
   background: hsl(173, 56%, 49%);
-}
+} */
 
 @media only screen and (max-width: 800px) {
   div.tracking div form img {
@@ -1602,6 +1605,7 @@ footer {
   /* padding: 8px; */
   background: #2A9D90;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .mailing p {
@@ -1745,10 +1749,440 @@ footer {
   }
 }
 
+/* landing page styling ends */
+
 /* book styling */
 .bookbg {
-background-image: url("/BP--Image-Dispatch-Rider-Web.png");
-border-bottom-left-radius: 5% ;
+  background-image: url("/BP--Image-Dispatch-Rider-Web.png");
+  border-bottom-left-radius: 5% ;
   border-bottom-right-radius: 5%;
 }
 
+button.ease-in-out {
+  transition: 0.2s ease-in-out;
+}
+
+button.ease-in-out:hover {
+  /* background: #2F855A; */
+  background: #004039;
+}
+
+/* payment page styling */
+.payment-banner {
+  width: 100%;
+  height: 90dvh;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.payment-banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.payment-banner-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: #fff;
+}
+
+.payment-banner-text h5 {
+  word-spacing: 2px;
+}
+
+.fill-form {
+  width: 100%;
+  height: 900px;
+  background: #fff;
+  position: relative;
+}
+
+.fill-form-container {
+  width: 90%;
+  position: absolute;
+  top: -40px;
+  left: 5%;
+}
+
+.first-forms,
+.third-forms {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-forms form,
+.third-forms form {
+  width: 100%;
+}
+
+.first-forms form h6 {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.first-forms form input,
+.third-forms form input,
+.estimated-price form input {
+  width: 98%;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #004039;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.first-forms form input::placeholder,
+.second-form form textarea::placeholder,
+.third-forms form input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsla(0, 0%, 0%, 0.3);
+}
+
+.first-forms form:nth-of-type(2) h6,
+.third-forms form:nth-of-type(2) h6 {
+  margin-left: 2%;
+}
+
+.first-forms form:nth-of-type(2) input,
+.third-forms form:nth-of-type(2) input {
+  float: right;
+}
+
+.second-form {
+  width: 100%;
+}
+
+.second-form form h6,
+.third-forms form h6,
+.delivery h6,
+.estimated-price form h6,
+.payment-options h6 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.second-form form textarea {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #004039;
+  background: transparent;
+  border-radius: 5px;
+  padding: 7px 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.delivery-service {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-service div {
+  padding: 10px 20px;
+  width: 28%;
+  border: 1px solid #004039;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.delivery-service div img {
+  width: 25px;
+}
+
+.delivery-service div h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  /* letter-spacing: 1px; */
+  word-spacing: 3px;
+  color: hsla(0, 0%, 0%, 0.9);
+}
+
+.delivery-service div h5 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.estimated-price form {
+  width: 28%;
+}
+
+.estimated-price form h6 {
+  font-weight: 900;
+  color: hsla(0, 0%, 0%, 0.9);
+}
+
+.payment-options h6 {
+  margin-top: 35px;
+}
+
+.payment-options div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #004039;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.payment-options div input {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  accent-color: #004039;
+  margin-right: 30px;
+}
+
+/* .payment-options div input::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #DCFFFC;
+} */
+
+.payment-options div section:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  position: absolute;
+  right: 10px;
+}
+
+.payment-options div section:nth-of-type(2) img {
+  width: 30px;
+}
+
+.payment-options div section:nth-of-type(2) img:nth-of-type(3) {
+  width: 20px;
+}
+
+.payment-options div h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: hsla(0, 0%, 0%, 0.8);
+}
+
+.payment-options div section h5 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.submit-first {
+  width: 40%;
+  margin-top: 35px;
+  margin-left: 30%;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  background: #2A9D90;
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.submit-first:hover {
+  background: #004039;
+}
+
+.payment-banner img:nth-of-type(2) {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .payment-banner {
+    height: 60dvh;
+  }
+
+  .payment-banner-text {
+    left: 15%;
+    text-align: center;
+  }
+
+  .payment-banner-text br {
+    display: none;
+  }
+
+  .payment-banner-text h5 {
+    word-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .payment-banner img:nth-of-type(1) {
+    display: none;
+  }
+
+  .payment-banner img:nth-of-type(2) {
+    display: block;
+  }
+
+  .payment-banner-text {
+    left: 12.5%;
+  }
+
+  .fill-form {
+    height: auto;
+  }
+
+  .fill-form-container {
+    position: unset;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .first-forms {
+    display: block;
+    margin-bottom: 65px;
+  }
+
+  .first-forms form input,
+  .estimated-price form input {
+    width: 100%;
+  }
+
+  .first-forms form h6,
+  .third-forms form h6,
+  .estimated-price form h6 {
+    margin-top: 15px;
+  }
+
+  .first-forms form:nth-of-type(2) h6 {
+    margin-left: 0;
+  }
+  
+  .first-forms form:nth-of-type(2) input {
+    float: left;
+  }
+
+  .second-form form textarea {
+    height: 120px;
+  }
+
+  .delivery-service {
+    flex-direction: column;
+  }
+
+  .delivery-service div {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .estimated-price form {
+    width: 100%;
+  }
+
+  .payment-options div input {
+    margin-right: 15px;
+  }
+
+  .payment-options div section:nth-of-type(2) {
+    width: 70px;
+  }
+
+  .payment-options div section:nth-of-type(2) img {
+    width: 20px;
+  }
+
+  .payment-options div section:nth-of-type(2) img:nth-of-type(3) {
+    width: 13px;
+  }
+
+  .submit-first {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .first-forms form h6,
+  .second-form form h6,
+  .third-forms form h6,
+  .delivery h6,
+  .estimated-price form h6,
+  .payment-options h6 {
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .first-forms form input::placeholder,
+  .second-form form textarea::placeholder,
+  .third-forms form input::placeholder {
+    font-size: 0.6rem;
+  }
+
+  .delivery-service div h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .delivery-service div h5 {
+    font-size: 0.65rem;
+  }
+
+  .payment-options div h4 {
+    font-size: 0.75rem;
+  }
+
+  .payment-options div section h5 {
+    font-size: 0.65rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .payment-banner-text {
+    left: 8%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .payment-banner-text {
+    left: 4%;
+  }
+
+  .payment-options div input {
+    margin-right: 10px;
+  }
+
+  .payment-options div section:nth-of-type(2) {
+    width: 50px;
+  }
+
+  .payment-options div section:nth-of-type(2) img {
+    width: 15px;
+  }
+
+  .payment-options div section:nth-of-type(2) img:nth-of-type(3) {
+    width: 10px;
+  }
+
+  .payment-options div h4 {
+    font-size: 0.65rem;
+  }
+
+  .payment-options div section h5 {
+    font-size: 0.55rem;
+  }
+}

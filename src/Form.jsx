@@ -143,7 +143,7 @@ const Form = () => {
         <div className="text-center mt-10 mb-10 lg:mb-20 w-full">
           <button
             type="submit"
-            className="bg-[#2A9D90] text-white font-bold text-[10px] lg:text-[20px]  lg:px-40 px-[7rem]  lg:py-3 py-2 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-1 focus:ring-green-600"
+            className="bg-[#2A9D90] text-white font-bold text-[10px] lg:text-[20px]  lg:px-40 px-[7rem]  lg:py-3 py-2 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-1 focus:ring-green-600 ease-in-out"
           >
             Proceed To Make Payment
           </button>
