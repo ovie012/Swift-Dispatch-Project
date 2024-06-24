@@ -9,40 +9,45 @@ function Book() {
     <>
       {/* <Header /> */}
       <div className="w-full h-full">
-        <div
-          className="bookbg w-full lg:h-[100vh] h-96 bg-cover bg-center pt-[40px]"
-          style={{
-            backgroundImage: "url('/BP--Image-Dispatch-Rider-Web.png')",
-          }}
-        >
-          <div className="text-white top-20 text-shadow-default lg:left-[60px] lg:w-[60%] w-full relative items-center lg:items-start flex flex-col gap-5">
-            <h1 className="lg:text-[60px] text-[20px] font-extrabold tracking-wide leading-20">
-              We Deliver Packages With Ease!
+        <div className="booking-banner">
+          <img
+            src="/BP--Image-Dispatch-Rider-Web.png"
+            alt="background image of a rider"
+          />
+          <img
+            src="/BP--Image-Dispatch-Rider-Mobile.png"
+            alt="background image of a rider"
+          />
+          <div className=" booking-banner-text backdrop-blur-sm">
+            <h1 className="text-[1.4rem] sm:text-4xl text-[#F2FFFE] font-bold leading-[2.8rem] mb-[20px]">
+              We Deliver Packages <br />
+              With Ease!
             </h1>
-            <p className="lg:text-[25px] text-xs font-regular tracking-wide">
-              Enjoy 20% discount on your first booking.{" "}
-            </p>
+            <h5 className="text-[0.7rem] sm:text-base text-[#DCFFFC] font-bold tracking-wide">
+              Enjoy <span>20</span>% discount on your first booking.
+            </h5>{" "}
+            {/* the use of span in this line is incase with time the discount percentage needs to be changes */}
           </div>
         </div>
 
         <div className="relative  flex flex-col lg:gap-15 gap-[1.5rem] w-[90%] mx-auto ">
           <div className="flex flex-col gap-14">
             <div className="flex flex-col gap-2  relative top-[2rem]">
-              <h1 className="lg:text-[30px] text-[20px] font-bold text-[#004039] ">
+              <h1 className="lg:text-[1.2rem] text-[1rem] font-bold text-[#004039] ">
                 Book Service Now
               </h1>
-              <p className="text-[#5F5F5F] lg:text-[20px] text-[10px]">
+              <p className="text-[#5F5F5F] lg:text-[0.9rem] text-[0.7rem]">
                 What Would You Need Help With Today ?
               </p>
             </div>
 
-            <div className="border border-3 rounded-lg backdrop: border-[#394d49] bg-[#e9faf8] w-full lg:w-[60%] flex items-center lg:gap-10 gap-5 px-5 py-3">
+            <div className="container w-full lg:w-[60%]">
               <img
                 src={BoxIcon}
                 alt="Box icon"
-                className="w-[20px] h-[20px] lg:h-[100px] lg:w-[100px]"
+                className="w-[25px] h-[25px] lg:h-[40px] lg:w-[40px]"
               />
-              <p className=" lg:text-[25px] text-[10px] font-bold text-[#5F5F5F]">
+              <p className="custom-label font-bold text-[#5F5F5F]">
                 Send And Receive A Package
               </p>
             </div>
