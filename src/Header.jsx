@@ -37,7 +37,7 @@ function Header() {
               <h3>Payment</h3>
             </Link>
             <Link to="/Report">
-              <h3>report a Rider</h3>
+              <h3>Report a Rider</h3>
             </Link>
             <Link to="/Book">
               <button className="book-now">Book Now</button>
