@@ -1,9 +1,11 @@
-import Header from "./Header";
 import { Link } from "react-router-dom";
+import Header from "./Header";
+import Footer from './Footer'
 
 function LandingPage() {
   return (
     <>
+      <Header />
       <main>
         <div className="banner">
           <div className="package-time">
@@ -323,6 +325,7 @@ function LandingPage() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

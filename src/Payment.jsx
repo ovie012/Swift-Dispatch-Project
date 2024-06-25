@@ -1,13 +1,19 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Header from './Header'
+import Footer from './Footer'
+
 function Payment () {
     return (
         <>
+            <Header />
             <main>
                 <div className="payment-banner">
                     <img src="/PS--Image-Delivery-Box-Web.png" alt="background image of delivery box" />
                     <img src="/PS--Image-Delivery-Box-Mobile.png" alt="background image of delivery box" />
                     <div className="payment-banner-text">
-                        <h1 className="text-[1.4rem] sm:text-4xl text-[#F2FFFE] font-bold leading-[2.8rem] mb-[20px]" >Exceptional <br />Delivery Services</h1>
-                        <h5 className="text-[0.7rem] sm:text-base text-[#DCFFFC] font-bold tracking-wide" >Enjoy <span>20</span>% discount on your first booking.</h5> {/* the use of span in this line is incase with time the discount percentage needs to be changes */}
+                        <h1 className="text-[1.4rem] sm:text-5xl text-[#F2FFFE] font-bold leading-[2.8rem] mb-[20px]" >Exceptional <br />Delivery Services</h1>
+                        <h5 className="text-[0.7rem] sm:text-xl text-[#DCFFFC] font-bold tracking-wide" >Enjoy <span>20</span>% discount on your first booking.</h5> {/* the use of span in this line is incase with time the discount percentage needs to be changes */}
                     </div>
                 </div>
                 <div className="fill-form">
@@ -93,10 +99,13 @@ function Payment () {
                                 <h4>Cash on Pickup / Delivery</h4>
                             </div>
                         </div>
-                        <button className="submit-first">Proceed</button>
+                        <Link to="/PaymentInfo">
+                            <button className="submit-first">Proceed</button>
+                        </Link>
                     </div>
                 </div>
             </main>
+            <Footer />
         </>
     );
 };

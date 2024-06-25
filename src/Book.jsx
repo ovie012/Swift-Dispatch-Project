@@ -8,7 +8,7 @@ import Form from "./Form.jsx";
 function Book() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="w-full h-full">
         <div
           className="bookbg w-full lg:h-[100vh] h-96 bg-cover bg-center"
@@ -53,7 +53,7 @@ function Book() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
