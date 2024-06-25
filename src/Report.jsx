@@ -1,10 +1,13 @@
 import "./App.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from './Header'
+import Footer from './Footer'
 
 function Report() {
   return (
     <>
+      <Header />
       <div className="min-h-screen flex flex-col justify-between">
         <div className="w-full flex-grow">
           <div className="flex flex-col lg:flex-row items-center justify-between pt-[8rem] lg:pt-[5rem]">
@@ -60,6 +63,7 @@ function Report() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
