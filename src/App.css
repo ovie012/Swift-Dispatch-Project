@@ -2333,6 +2333,7 @@ button.ease-in-out:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 .payment-info-container {
@@ -2526,6 +2527,7 @@ div.exp-date input {
 @media only screen and (max-width:500px) {
   .payment-info-container {
     width: 100%;
+    height: 100%;
   }
 
   .payment-info h2 {
@@ -2564,6 +2566,7 @@ div.exp-date input {
 
   .payment-info button {
     margin-top: 15%;
+    margin-bottom: 15%;
   }
 }
 
@@ -2584,6 +2587,406 @@ div.exp-date input {
 
   .payment-info button {
     margin-top: 10%;
+  }
+}
+
+/* Real Time Tracking Page */
+.track-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.track-container h2 {
+  margin-top: 120px;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #004039;
+}
+
+.track-container h6 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: hsla(0, 0%, 0%, 0.7);
+  margin-bottom: 20px;
+}
+
+.track-map-container {
+  margin-bottom: 150px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.track-map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.track-map img:nth-of-type(2) {
+  display: none;
+}
+
+div.track-showing {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 40%;
+  height: 75%;
+  padding: 2%;
+  border-radius: 10px;
+  background: #DCFFFC;
+  z-index: 10;
+}
+
+.track-showing h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #004039;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.track-showing h5,
+.track-showing h6,
+.track-showing p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: hsla(0, 0%, 0%, 0.5);
+  margin-bottom: 5px;
+}
+
+.track-showing h6 {
+  text-align: center;
+}
+
+div.span-image-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 96%;
+}
+
+.span-image-horizontal img,
+.package-destination img,
+.last-update img {
+  width: 30px;
+}
+
+.span-image-horizontal span {
+  height: 1.3px;
+  width: 35%;
+  background: #004039;
+}
+
+.track-showing h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.package-destination {
+  display: flex;
+  height: 70px;
+  gap: 15px;
+  /* background: #004039; */
+}
+
+.package-destination h4,
+.last-update h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #004039;
+}
+
+.last-update {
+  width: 100%;
+  height: 35%;
+  display: flex;
+}
+
+.last-update div {
+  /* width: 100%; */
+  height: 100%;
+  /* background: #004039; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.last-update div:nth-of-type(1) {
+  margin-top: 15px;
+}
+
+.last-update div:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+/* .last-update div:nth-of-type(2) {
+  width: 100%;
+  justify-content: space-between;
+} */
+
+.last-update span {
+  width: 1.3px;
+  height: 50%;
+  background: #004039;
+  /* display: block; */
+  /* margin-left: 48%; */
+}
+
+section.last-update-location {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  /* gap: 50px; */
+}
+
+section.last-update-location p:nth-of-type(1) {
+  float: left;
+  /* background: #004039; */
+  width: 230px;
+}
+
+section.last-update-location p:nth-of-type(2) {
+  float: right;
+  margin-bottom: 15px;
+}
+
+.track-showing button {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #F2FFFE;
+  background: #2A9D90;
+  transition: 0.2s ease-in-out;
+}
+
+.track-showing button:hover {
+  background: #004039;
+}
+
+@media only screen and (min-width:1100px) {
+
+  .track-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .track-container h6 {
+    font-size: 1rem;
+  }
+
+  div.track-showing {
+    height: 70%;
+  }
+
+  .track-showing button {
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+
+  .track-showing h3 {
+    font-size: 1.2rem;
+  }
+  
+  .track-showing h5,
+  .track-showing h6,
+  .track-showing p {
+    font-size: 1rem;
+  }
+
+  .track-showing h5 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  section.last-update-location p:nth-of-type(1) {
+    width: 290px;
+  }
+  
+  section.last-update-location p:nth-of-type(2) {
+    margin-bottom: 25px;
+  }
+
+  .track-showing button {
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width:1000px) {
+  div.track-showing {
+    height: 80%;
+    top: 10%;
+  }
+  
+  .track-showing h3 {
+    font-size: 1.1rem;
+  }
+  
+  .track-showing h5,
+  .track-showing h6,
+  .track-showing p {
+    font-size: 0.8rem;
+  }
+
+  .track-showing h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .package-destination h4,
+  .last-update h4 {
+    font-size: 0.8rem;
+  }
+
+  section.last-update-location p:nth-of-type(1) {
+    width: 180px;
+  }
+  
+  section.last-update-location p:nth-of-type(2) {
+    margin-bottom: 15px;
+  }
+
+  .track-showing button {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .track-showing h3 {
+    font-size: 1rem;
+  }
+  
+  .track-showing h5,
+  .track-showing h6,
+  .track-showing p {
+    font-size: 0.7rem;
+  }
+
+  .track-showing h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  section.last-update-location p:nth-of-type(1) {
+    width: 160px;
+  }
+  
+  section.last-update-location p:nth-of-type(2) {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  
+  .track-showing h3 {
+    font-size: 0.9rem;
+  }
+  
+  .track-showing h5,
+  .track-showing h6,
+  .track-showing p {
+    font-size: 0.65rem;
+  }
+
+  .track-showing h5 {
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+  }
+
+  section.last-update-location p:nth-of-type(1) {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width:400px) and (max-width:500px) {
+  section.last-update-location p:nth-of-type(1) {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+
+  .track-map-container{
+    margin-bottom: 50px;
+  }
+
+  .track-container h2 {
+    font-size: 1.3rem;
+  }
+  
+  .track-container h6 {
+    font-size: 0.7rem;
+  }
+
+  .track-map img:nth-of-type(1) {
+    display: none;
+  }
+
+  .track-map img:nth-of-type(2) {
+    display: block;
+    width: 100%;
+  }
+
+  .track-map {
+    height: auto;
+  }
+
+  .package-destination h4 {
+    margin-top: 10px;
+  }
+  
+  section.last-update-location p:nth-of-type(2) {
+    margin-bottom: 15px;
+  }
+
+  div.track-showing {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 500px;
+    padding: 4%;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width:350px) {
+  .track-showing h3 {
+    font-size: 0.7rem;
+  }
+  
+  .track-showing h5,
+  .track-showing h6,
+  .track-showing p {
+    font-size: 0.55rem;
+  }
+
+  .last-update div:nth-of-type(2) {
+    margin-left: 10px;
+  }
+
+  .package-destination h4,
+  .last-update h4 {
+    font-size: 0.65rem;
+  }
+
+  section.last-update-location p:nth-of-type(1) {
+    width: 120px;
+  }
+  
+  section.last-update-location p:nth-of-type(2) {
+    margin-bottom: 30px;
   }
 }
 
