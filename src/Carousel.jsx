@@ -1,55 +1,76 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import SwiperCore, { Navigation, Pagination } from "swiper";
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
+import React, { useState } from "react";
+import "./App.css";
 
-// Install modules
-SwiperCore.use([Navigation, Pagination]);
+const images = [
+  {
+    src: "/RAR--Icon-Fill-Form.svg",
+    heading: "Fill Form",
+    description: "Fill out the form provided below with a detailed report",
+  },
+  {
+    src: "/RAR--Icon-Attach-Document.svg",
+    heading: "Attach Document",
+    description: "Attach any supporting documents or images ",
+  },
+  {
+    src: "/RAR--Icon-Submit-Report.svg",
+    heading: "Submit Report",
+    description: " Click Submit to send your report",
+  },
+  // { src: 'https://via.placeholder.com/300', heading: 'Heading 4', description: 'Description for image 4' },
+  // { src: 'https://via.placeholder.com/300', heading: 'Heading 5', description: 'Description for image 5' },
+];
 
-const Carousel = () => {
+const CustomCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  const getVisibleImages = () => {
+    const visibleImages = window.innerWidth >= 1024 ? 3 : 2;
+    const endIndex = (currentIndex + visibleImages) % images.length;
+    return endIndex > currentIndex
+      ? images.slice(currentIndex, endIndex)
+      : [...images.slice(currentIndex), ...images.slice(0, endIndex)];
+  };
+
   return (
-    <div className="swiper-container">
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={20}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
-        navigation
-        pagination={{ clickable: true }}
-      >
-        <SwiperSlide>
-          <div className="flex flex-col items-center text-center">
-            <img src="image1.jpg" alt="Image 1" className="w-full" />
-            <h3 className="text-xl font-bold mt-2">Heading 1</h3>
-            <p className="text-sm text-gray-600">Description for image 1</p>
+    <div className="carousel-container ">
+      <div className="carousel-inner ">
+        {getVisibleImages().map((image, index) => (
+          <div key={index} className="carousel-item">
+            <img
+              src={image.src}
+              alt={image.heading}
+              className="carousel-image"
+            />
+            <div className="carousel-text flex flex-col gap-3">
+              <h3 className="text-[1rem] sm:text-xl text-[#004039] font-bold leading-[1.5rem]">
+                {image.heading}
+              </h3>
+              <p className="text-[0.7rem] sm:text-xs text-[#5F5F5F] font-bold tracking-wide">
+                {image.description}
+              </p>
+            </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col items-center text-center">
-            <img src="image2.jpg" alt="Image 2" className="w-full" />
-            <h3 className="text-xl font-bold mt-2">Heading 2</h3>
-            <p className="text-sm text-gray-600">Description for image 2</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col items-center text-center">
-            <img src="image3.jpg" alt="Image 3" className="w-full" />
-            <h3 className="text-xl font-bold mt-2">Heading 3</h3>
-            <p className="text-sm text-gray-600">Description for image 3</p>
-          </div>
-        </SwiperSlide>
-      </Swiper>
+        ))}
+      </div>
+      <button className="carousel-control-prev" onClick={handlePrev}>
+        &#9664;
+      </button>
+      <button className="carousel-control-next" onClick={handleNext}>
+        &#9654;
+      </button>
     </div>
   );
 };
 
-export default Carousel;
+export default CustomCarousel;

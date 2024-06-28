@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import stopwatch from "./assets/RAR--Illustration-Stopwatch.svg";
 import TwoPeople from "./assets/RAR--Illustration-Two-People.svg";
 import DamagedPhone from "./assets/RAR--Illustration-Damaged-Phone.svg";
+import CustomCarousel from "./Carousel";
 
 function Report() {
   return (
@@ -155,7 +156,9 @@ function Report() {
                 Submitting a report is easy! Just follow these steps below
               </h5>
             </div>
-            <div></div>
+            <div>
+              <CustomCarousel />
+            </div>
           </div>
         </div>
       </div>
