@@ -1,8 +1,12 @@
 import "./App.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from './Header'
-import Footer from './Footer'
+import Header from "./Header";
+import Footer from "./Footer";
+import stopwatch from "./assets/RAR--Illustration-Stopwatch.svg";
+import TwoPeople from "./assets/RAR--Illustration-Two-People.svg";
+import DamagedPhone from "./assets/RAR--Illustration-Damaged-Phone.svg";
+import CustomCarousel from "./Carousel";
 
 function Report() {
   return (
@@ -50,15 +54,110 @@ function Report() {
             </div>
           </div>
 
-          <div className="bg-[#DCFFFC] ">
-            <div className=" relative left-[5%] flex flex-col lg:gap-5">
-              <h1 className="text-[1.4rem] sm:text-2xl text-[#004039] font-bold leading-[2.8rem] ">
-                What To Report
+          <div className="bg-[#DCFFFC] w-full">
+            <div className="lg:max-w-4xl mx-auto py-10 w-[90%]">
+              <div className="flex flex-col lg:gap-5">
+                <h1 className="text-[1.4rem] sm:text-2xl text-[#004039] font-bold leading-[2.8rem]">
+                  What To Report
+                </h1>
+                <h5 className="text-[0.7rem] sm:text-sm text-[#5F5F5F] font-bold tracking-wide">
+                  We want to know if you've experienced
+                  <br /> any of these, or similar issues with our
+                  <br className="hidden lg:block" /> riders
+                </h5>
+              </div>
+              <div className="flex flex-col gap-20 items-center justify-between ">
+                <div className="flex flex-row items-center justify-between w-full bg-red-700">
+                  <img
+                    src={stopwatch}
+                    alt="Stopwatch icon"
+                    className="w-50 h-50"
+                  />
+                  <div className="flex flex-col items-center mx-5">
+                    <span className="line"></span>
+                    {/* <img
+                      src="/RAR--square.png"
+                      alt="Square"
+                      className="w-[50%] h-[50%]"
+                    />
+                    <img src="/RAR--line.png" alt="Line" className="h-[500px] w-[60px]" /> */}
+                  </div>
+                  <div className="max-w-md">
+                    <h1 className="text-lg font-bold">
+                      Late Arrival or Not Showing Up
+                    </h1>
+                    <h5 className="text-sm">
+                      Have you had an experience of our riders not showing up
+                      with your package without a tangible reason, or continuous
+                      late delivery of your product?
+                    </h5>
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-between w-full">
+                  <img
+                    src={TwoPeople}
+                    alt="Two People icon"
+                    className="w-50 h-50"
+                  />
+                  <div className="flex flex-col items-center mx-5">
+                    <img
+                      src="/RAR--square.png"
+                      alt="Square"
+                      className="w-[50%] h-[50%]"
+                    />
+                    <img src="/RAR--line.png" alt="Line" className="" />
+                  </div>
+                  <div className="max-w-md">
+                    <h1 className="text-lg font-bold">
+                      Rude And Unprofessional Attitude
+                    </h1>
+                    <h5 className="text-sm">
+                      We at SwiftDispatch frown at any form of
+                      unprofessionalism. Has any of our riders spoken to you
+                      rudely or attended to you in an inappropriate manner?
+                    </h5>
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-between w-full">
+                  <img
+                    src={DamagedPhone}
+                    alt="Damaged Phone icon"
+                    className="w-50 h-50"
+                  />
+                  <div className="flex flex-col items-center mx-5">
+                    <img
+                      src="/RAR--square.png"
+                      alt="Square"
+                      className="w-[50%] h-[50%]"
+                    />
+                    <img src="/RAR--line.png" alt="Line" className="" />
+                  </div>
+                  <div className="max-w-md">
+                    <h1 className="text-lg font-bold">
+                      Mishandling or Loss of Package
+                    </h1>
+                    <h5 className="text-sm">
+                      Have you met your package in a damaged state or have you
+                      lost a package as a result of carelessness of our riders?
+                      Do let us know about your experience.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full mt-10">
+            <div className="flex flex-col items-center">
+              <h1 className="text-[1.4rem] sm:text-2xl text-[#004039] font-bold leading-[2.8rem]">
+                How To Report
               </h1>
               <h5 className="text-[0.7rem] sm:text-sm text-[#5F5F5F] font-bold tracking-wide">
-                We want to know if you've experienced<br/> any of these, or similar
-                issues with our<br  className="hidden lg:block"/> riders
+                Submitting a report is easy! Just follow these steps below
               </h5>
+            </div>
+            <div>
+              <CustomCarousel />
             </div>
           </div>
         </div>
