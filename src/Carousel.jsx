@@ -17,8 +17,7 @@ const images = [
     heading: "Submit Report",
     description: " Click Submit to send your report",
   },
-  // { src: 'https://via.placeholder.com/300', heading: 'Heading 4', description: 'Description for image 4' },
-  // { src: 'https://via.placeholder.com/300', heading: 'Heading 5', description: 'Description for image 5' },
+
 ];
 
 const CustomCarousel = () => {
