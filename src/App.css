@@ -3020,21 +3020,89 @@ section.last-update-location p:nth-of-type(2) {
 }
 
 /* report a rider page */
+.what-to-report {
+  margin-bottom: 100px;
+}
+
+.reporting {
+  padding-bottom: 100px;
+}
+
+.line-div {
+  position: relative;
+}
+
+.line-box-div {
+  position: relative;
+}
 
 .line{
   width: 2px;
-  height: 500px;
+  height: 650px;
   background: #000;
-  position: relative;
-
-}
-.line::after{
-  content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
+  top: -80px;
+}
+
+.line::before{
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 20px;
+  height: 20px;
   top: 0;
-  left: 0;
+  left: -10px;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  left: -10px;
+}
+
+.line-box::before{
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 20px;
+  height: 20px;
+  top: 25%;
+  left: 36.75%;
+}
+
+.line-box::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 20px;
+  height: 20px;
+  bottom: 25%;
+  left: 36.75%;
+}
+
+@media only screen and (max-width:1000px) {
+  .line-box::before,
+  .line-box::after {
+    left: 35.7%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .line-box::before,
+  .line-box::after {
+    left: 33.7%;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .line-box::before,
+  .line-box::after {
+    left: 34.7%;
+  }
 }
 
 .carousel-container {

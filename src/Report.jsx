@@ -54,9 +54,9 @@ function Report() {
             </div>
           </div>
 
-          <div className="bg-[#DCFFFC] w-full">
+          <div className="bg-[#DCFFFC] w-full reporting">
             <div className="lg:max-w-4xl mx-auto py-10 w-[90%]">
-              <div className="flex flex-col lg:gap-5">
+              <div className="flex flex-col lg:gap-5 what-to-report">
                 <h1 className="text-[1.4rem] sm:text-2xl text-[#004039] font-bold leading-[2.8rem]">
                   What To Report
                 </h1>
@@ -66,21 +66,21 @@ function Report() {
                   <br className="hidden lg:block" /> riders
                 </h5>
               </div>
-              <div className="flex flex-col gap-20 items-center justify-between ">
-                <div className="flex flex-row items-center justify-between w-full bg-red-700">
+              <div className="flex flex-col gap-20 items-center justify-between line-box-div">
+                <div className="flex flex-row items-center justify-between w-full">
                   <img
                     src={stopwatch}
                     alt="Stopwatch icon"
                     className="w-50 h-50"
                   />
-                  <div className="flex flex-col items-center mx-5">
-                    <span className="line"></span>
+                  <div className="flex flex-col items-center mx-5 line-div">
                     {/* <img
                       src="/RAR--square.png"
                       alt="Square"
                       className="w-[50%] h-[50%]"
-                    />
-                    <img src="/RAR--line.png" alt="Line" className="h-[500px] w-[60px]" /> */}
+                    /> */}
+                    <span className="line"></span>
+                    {/* <img src="/RAR--line.png" alt="Line" className="h-[500px] w-[60px]" /> */}
                   </div>
                   <div className="max-w-md">
                     <h1 className="text-lg font-bold">
@@ -100,12 +100,13 @@ function Report() {
                     className="w-50 h-50"
                   />
                   <div className="flex flex-col items-center mx-5">
-                    <img
+                  <span className="line-box"></span>
+                    {/* <img
                       src="/RAR--square.png"
                       alt="Square"
                       className="w-[50%] h-[50%]"
-                    />
-                    <img src="/RAR--line.png" alt="Line" className="" />
+                    /> */}
+                    {/* <img src="/RAR--line.png" alt="Line" className="" /> */}
                   </div>
                   <div className="max-w-md">
                     <h1 className="text-lg font-bold">
@@ -125,12 +126,12 @@ function Report() {
                     className="w-50 h-50"
                   />
                   <div className="flex flex-col items-center mx-5">
-                    <img
+                    {/* <img
                       src="/RAR--square.png"
                       alt="Square"
                       className="w-[50%] h-[50%]"
-                    />
-                    <img src="/RAR--line.png" alt="Line" className="" />
+                    /> */}
+                    {/* <img src="/RAR--line.png" alt="Line" className="" /> */}
                   </div>
                   <div className="max-w-md">
                     <h1 className="text-lg font-bold">
