@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function PaymentInfo() {
     return (
         <>
@@ -5,6 +7,9 @@ function PaymentInfo() {
                 <div className="payment-info-container">
                     <div className="linear-gradient-div"></div>
                     <div className="payment-info">
+                        <Link to="/Payment">
+                            <img src="/bx-arrow-back.svg" alt="go back arrow" className="back-arrow" />
+                        </Link>
                         <h2>Payment Information</h2>
                         <form action="POST">
                             <h6>Amount</h6>
