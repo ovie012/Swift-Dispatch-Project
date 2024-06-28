@@ -3000,3 +3000,19 @@ section.last-update-location p:nth-of-type(2) {
 .report-banner-text h5 {
   word-spacing: 2px;
 }
+
+.line{
+  width: 2px;
+  height: 500px;
+  background: #000;
+  position: relative;
+
+}
+.line::after{
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  left: 0;
+}

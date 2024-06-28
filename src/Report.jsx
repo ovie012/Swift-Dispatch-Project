@@ -66,19 +66,20 @@ function Report() {
                 </h5>
               </div>
               <div className="flex flex-col gap-20 items-center justify-between ">
-                <div className="flex flex-row items-center justify-between w-full">
+                <div className="flex flex-row items-center justify-between w-full bg-red-700">
                   <img
                     src={stopwatch}
                     alt="Stopwatch icon"
                     className="w-50 h-50"
                   />
                   <div className="flex flex-col items-center mx-5">
-                    <img
+                    <span className="line"></span>
+                    {/* <img
                       src="/RAR--square.png"
                       alt="Square"
                       className="w-[50%] h-[50%]"
                     />
-                    <img src="/RAR--line.png" alt="Line" className="" />
+                    <img src="/RAR--line.png" alt="Line" className="h-[500px] w-[60px]" /> */}
                   </div>
                   <div className="max-w-md">
                     <h1 className="text-lg font-bold">
@@ -143,6 +144,18 @@ function Report() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="w-full mt-10">
+            <div className="flex flex-col items-center">
+              <h1 className="text-[1.4rem] sm:text-2xl text-[#004039] font-bold leading-[2.8rem]">
+                How To Report
+              </h1>
+              <h5 className="text-[0.7rem] sm:text-sm text-[#5F5F5F] font-bold tracking-wide">
+                Submitting a report is easy! Just follow these steps below
+              </h5>
+            </div>
+            <div></div>
           </div>
         </div>
       </div>
