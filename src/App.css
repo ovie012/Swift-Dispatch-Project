@@ -85,6 +85,16 @@ main {
   display: none;
 }
 
+.payment-header button.mobile-click-open img,
+.book-header button.mobile-click-open img {
+  filter: brightness(100%) saturate(100%) invert(100%);
+}
+
+.payment-header.scrolled button.mobile-click-open img,
+.book-header.scrolled button.mobile-click-open img {
+  filter: brightness(0) saturate(0) invert(0);
+}
+
 .payment-header h3,
 .book-header h3,
 .payment-header h2,
