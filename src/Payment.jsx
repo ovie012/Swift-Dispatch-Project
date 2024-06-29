@@ -125,7 +125,7 @@ function Payment() {
                 <h4>Cash on Pickup / Delivery</h4>
               </div>
             </div>
-            <Link to="/PaymentInfo">
+            <Link to="/Payment/PaymentInfo">
               <button className="submit-first">Proceed</button>
             </Link>
           </div>
