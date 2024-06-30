@@ -7,6 +7,7 @@ import stopwatch from "./assets/RAR--Illustration-Stopwatch.svg";
 import TwoPeople from "./assets/RAR--Illustration-Two-People.svg";
 import DamagedPhone from "./assets/RAR--Illustration-Damaged-Phone.svg";
 import CustomCarousel from "./Carousel";
+import FileUpload from "./FileUpload";
 
 function Report() {
   return (
@@ -162,9 +163,57 @@ function Report() {
             </div>
           </div>
 
-          <div>
-            <div>
-              <p className="text-[#004039] font-bold">Start Your Report</p>
+          <div className="w-[90%] mx-auto">
+            <h1 className="text-[#004039] font-bold lg:text-4xl text-2xl">
+              Start Your Report
+            </h1>
+            <div className="mt-10">
+              <form className=" rounded-lg w-full mb-5 ">
+                <div className="flex flex-col lg:flex-row items-start lg:items-stretch justify-between lg:gap-4">
+                  <div className="w-full lg:w-1/2">
+                    {/* Name */}
+                    <div className="mb-4 flex flex-col gap-2 w-full">
+                      <label className="custom-label">Rider's Name</label>
+                      <input
+                        type="text"
+                        placeholder="Adamu Musa"
+                        className="input-field"
+                      />
+                    </div>
+
+                    {/* ID Number */}
+                    <div className="mb-4 flex flex-col gap-2 w-full">
+                      <label className="custom-label">Rider's ID Number</label>
+                      <input
+                        type="text"
+                        placeholder="SD1176"
+                        className="input-field"
+                      />
+                    </div>
+
+                    {/* Location */}
+                    <div className="mb-4 flex flex-col gap-2 w-full">
+                      <label className="custom-label">Location</label>
+                      <input
+                        type="text"
+                        placeholder="Sangotedo"
+                        className="input-field"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="w-full lg:w-1/2 flex flex-col gap-2 lg:ml-4">
+                    <label className="custom-label text-center">
+                      Write Your Detailed Report
+                    </label>
+                    <textarea
+                      placeholder="Hello, I’m Jessica my delivery  came in..."
+                      className="flex-grow px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 bg-[#EFEFEF]"
+                    ></textarea>
+                  </div>
+                </div>
+              </form>
+              <FileUpload/>
             </div>
           </div>
         </div>
