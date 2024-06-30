@@ -100,7 +100,7 @@ function Report() {
                     className="w-50 h-50"
                   />
                   <div className="flex flex-col items-center mx-5">
-                  <span className="line-box"></span>
+                    <span className="line-box"></span>
                     {/* <img
                       src="/RAR--square.png"
                       alt="Square"
@@ -159,6 +159,12 @@ function Report() {
             </div>
             <div>
               <CustomCarousel />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <p className="text-[#004039] font-bold">Start Your Report</p>
             </div>
           </div>
         </div>
