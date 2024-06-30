@@ -8,7 +8,7 @@ import TwoPeople from "./assets/RAR--Illustration-Two-People.svg";
 import DamagedPhone from "./assets/RAR--Illustration-Damaged-Phone.svg";
 import CustomCarousel from "./Carousel";
 import FileUpload from "./FileUpload";
-
+import Curvy from "./assets/RAR--Shape-Curvy-Dashed-Arrow.svg";
 function Report() {
   return (
     <>
@@ -213,8 +213,69 @@ function Report() {
                   </div>
                 </div>
               </form>
-              <FileUpload/>
+              <FileUpload />
             </div>
+          </div>
+
+          <div className="bg-[#DCFFFC] mt-10 lg:mt-20 mb-5">
+            <div className=" w-[90%] mx-auto flex flex-col gap-5 lg:flex-row items-center justify-between pb-5">
+              <div className="w-full ">
+                <img
+                  src="/RAR--Illustration-Call-Attendant-Web.png"
+                  alt="call attendant"
+                 
+                />
+              </div>
+              <div className="flex flex-col items-stretch justify-between lg:gap-10 gap-5 w-full ">
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-[#004039] font-medium lg:text-[1.8rem] text-xl">
+                    Why Report?
+                  </h1>
+                  <h3 className="text-[#5F5F5F] font-normal text-[1rem] ">
+                    Your feedback matters! By reporting issues, you'll help us:
+                  </h3>
+                </div>
+                <div className="text-[#5F5F5F]  text-[1rem] flex flex-col gap-3">
+                  <div className="flex items-center  gap-3">
+                    <img
+                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      alt="tick"
+                      width={20}
+                      height={20}
+                    />
+                    <h3>Improve our services and rider performance</h3>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      alt="tick"
+                      width={20}
+                      height={20}
+                    />
+                    <h3>Ensure our accountability and transparency</h3>
+                  </div>
+                  <div className="flex items-center  gap-3">
+                    <img
+                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      alt="tick"
+                      width={20}
+                      height={20}
+                    />
+                    <h3> Provide a better experience for our customers</h3>
+                  </div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <p className="text-[#004039] lg:text-[1.8rem] text-xl font-bold">
+                    <span className="text-[#BC0000]">CALL US:</span>{" "}
+                    0803475767298
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-5">
+            <img src={Curvy} alt="curvy arrow" className="mx-auto" />
           </div>
         </div>
       </div>
