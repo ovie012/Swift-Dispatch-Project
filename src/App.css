@@ -74,10 +74,39 @@ main {
   overflow-x: hidden;
 }
 
+.active {
+  font-weight: 700;
+  color: #004039;
+}
+
 /* for mobile nav  */
 .mobile-nav,
 .mobile-click-open {
   display: none;
+}
+
+.payment-header button.mobile-click-open img,
+.book-header button.mobile-click-open img {
+  filter: brightness(100%) saturate(100%) invert(100%);
+}
+
+.payment-header.scrolled button.mobile-click-open img,
+.book-header.scrolled button.mobile-click-open img {
+  filter: brightness(0) saturate(0) invert(0);
+}
+
+.payment-header h3,
+.book-header h3,
+.payment-header h2,
+.book-header h2 {
+  color: #F2FFFE;
+}
+
+.payment-header.scrolled h3,
+.book-header.scrolled h3,
+.payment-header.scrolled h2,
+.book-header.scrolled h2 {
+  color: #000;
 }
 
 @media only screen and (max-width: 800px) {

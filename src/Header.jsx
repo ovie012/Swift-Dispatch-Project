@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,27 +22,46 @@ function Header() {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
+  const getHeaderClass = () => {
+    switch (location.pathname) {
+      case "/Payment":
+        return "payment-header";
+      case "/Book":
+        return "book-header";
+      default:
+        return "";
+    }
+  };
+
   return (
     <>
-      <header className={isScrolled ? "scrolled" : ""}>
+      <header className={`${isScrolled ? "scrolled" : ""} ${getHeaderClass()}`}>
         <div className="header">
           <h2 className="logo">SwiftDispatch</h2>
           <nav className="nav">
-            <Link to="/">
-              <h3>Home</h3>
-            </Link>
-            <Link to="/Track">
-              <h3>Track Order</h3>
-            </Link>
-            <Link to="/Payment">
-              <h3>Payment</h3>
-            </Link>
-            <Link to="/Report">
-              <h3>Report a Rider</h3>
-            </Link>
-            <Link to="/Book">
+              <h3>
+                <NavLink to="/">
+                  Home
+                </NavLink>
+              </h3>
+              <h3>
+                <NavLink to="/Track">
+                  Track Order
+                </NavLink>
+              </h3>
+              <h3>
+                <NavLink to="/Payment">
+                  Payment
+                </NavLink>
+              </h3>
+              <h3>
+               <NavLink to="/Report">
+                 Report a Rider
+               </NavLink>
+              </h3>
+            <NavLink to="/Book">
               <button className="book-now">Book Now</button>
-            </Link>
+            </NavLink>
           </nav>
           <button className="mobile-click-open" onClick={toggleMobileNav}>
             {/* <img src="./SwiftDispatch - Assets/Landing Page/icon-menu.svg" alt="click for mobile nav"> */}
@@ -54,21 +74,21 @@ function Header() {
             </button>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <Link to="/Track">Track Order</Link>
+                <NavLink to="/Track">Track Order</NavLink>
               </li>
               <li>
-                <Link to="/Payment">Payment</Link>
+                <NavLink to="/Payment">Payment</NavLink>
               </li>
               <li>
                 {" "}
-                <Link to="/Report">Report a Rider</Link>
+                <NavLink to="/Report">Report a Rider</NavLink>
               </li>
-              <Link to="/Book">
+              <NavLink to="/Book">
                 <button className="book-now mobile-book-now">Book Now</button>
-              </Link>
+              </NavLink>
             </ul>
           </nav>
         </div>
