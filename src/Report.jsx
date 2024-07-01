@@ -7,7 +7,8 @@ import stopwatch from "./assets/RAR--Illustration-Stopwatch.svg";
 import TwoPeople from "./assets/RAR--Illustration-Two-People.svg";
 import DamagedPhone from "./assets/RAR--Illustration-Damaged-Phone.svg";
 import CustomCarousel from "./Carousel";
-
+import FileUpload from "./FileUpload";
+import Curvy from "./assets/RAR--Shape-Curvy-Dashed-Arrow.svg";
 function Report() {
   return (
     <>
@@ -100,7 +101,7 @@ function Report() {
                     className="w-50 h-50"
                   />
                   <div className="flex flex-col items-center mx-5">
-                  <span className="line-box"></span>
+                    <span className="line-box"></span>
                     {/* <img
                       src="/RAR--square.png"
                       alt="Square"
@@ -160,6 +161,121 @@ function Report() {
             <div>
               <CustomCarousel />
             </div>
+          </div>
+
+          <div className="w-[90%] mx-auto">
+            <h1 className="text-[#004039] font-bold lg:text-4xl text-2xl">
+              Start Your Report
+            </h1>
+            <div className="mt-10">
+              <form className=" rounded-lg w-full mb-5 ">
+                <div className="flex flex-col lg:flex-row items-start lg:items-stretch justify-between lg:gap-4">
+                  <div className="w-full lg:w-1/2">
+                    {/* Name */}
+                    <div className="mb-4 flex flex-col gap-2 w-full">
+                      <label className="custom-label">Rider's Name</label>
+                      <input
+                        type="text"
+                        placeholder="Adamu Musa"
+                        className="input-field"
+                      />
+                    </div>
+
+                    {/* ID Number */}
+                    <div className="mb-4 flex flex-col gap-2 w-full">
+                      <label className="custom-label">Rider's ID Number</label>
+                      <input
+                        type="text"
+                        placeholder="SD1176"
+                        className="input-field"
+                      />
+                    </div>
+
+                    {/* Location */}
+                    <div className="mb-4 flex flex-col gap-2 w-full">
+                      <label className="custom-label">Location</label>
+                      <input
+                        type="text"
+                        placeholder="Sangotedo"
+                        className="input-field"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="w-full lg:w-1/2 flex flex-col gap-2 lg:ml-4">
+                    <label className="custom-label text-center">
+                      Write Your Detailed Report
+                    </label>
+                    <textarea
+                      placeholder="Hello, I’m Jessica my delivery  came in..."
+                      className="flex-grow px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 bg-[#EFEFEF]"
+                    ></textarea>
+                  </div>
+                </div>
+              </form>
+              <FileUpload />
+            </div>
+          </div>
+
+          <div className="bg-[#DCFFFC] mt-10 lg:mt-20 mb-5">
+            <div className=" w-[90%] mx-auto flex flex-col gap-5 lg:flex-row items-center justify-between pb-5">
+              <div className="w-full ">
+                <img
+                  src="/RAR--Illustration-Call-Attendant-Web.png"
+                  alt="call attendant"
+                 
+                />
+              </div>
+              <div className="flex flex-col items-stretch justify-between lg:gap-10 gap-5 w-full ">
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-[#004039] font-medium lg:text-[1.8rem] text-xl">
+                    Why Report?
+                  </h1>
+                  <h3 className="text-[#5F5F5F] font-normal text-[1rem] ">
+                    Your feedback matters! By reporting issues, you'll help us:
+                  </h3>
+                </div>
+                <div className="text-[#5F5F5F]  text-[1rem] flex flex-col gap-3">
+                  <div className="flex items-center  gap-3">
+                    <img
+                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      alt="tick"
+                      width={20}
+                      height={20}
+                    />
+                    <h3>Improve our services and rider performance</h3>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      alt="tick"
+                      width={20}
+                      height={20}
+                    />
+                    <h3>Ensure our accountability and transparency</h3>
+                  </div>
+                  <div className="flex items-center  gap-3">
+                    <img
+                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      alt="tick"
+                      width={20}
+                      height={20}
+                    />
+                    <h3> Provide a better experience for our customers</h3>
+                  </div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <p className="text-[#004039] lg:text-[1.8rem] text-xl font-bold">
+                    <span className="text-[#BC0000]">CALL US:</span>{" "}
+                    0803475767298
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-5">
+            <img src={Curvy} alt="curvy arrow" className="mx-auto" />
           </div>
         </div>
       </div>
