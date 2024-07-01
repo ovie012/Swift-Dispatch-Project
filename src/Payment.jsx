@@ -105,7 +105,9 @@ function Payment() {
             <div className="payment-options">
               <h6>Payment Options</h6>
               <div>
-                <input type="checkbox" />
+                <span className="payment-method-picked">
+                  <img src="/Tick-Mark--Green.svg" alt="tick" />
+                </span>
                 <section>
                   <h4>Bank Card</h4>
                   <h5>Pay with Verve, Visa, MasterCard.</h5>
@@ -117,11 +119,15 @@ function Payment() {
                 </section>
               </div>
               <div>
-                <input type="checkbox" />
+                <span className="payment-method-picked">
+                  <img src="/Tick-Mark--Green.svg" alt="tick" />
+                </span>
                 <h4>Bank Transfer</h4>
               </div>
               <div>
-                <input type="checkbox" />
+                <span className="payment-method-picked">
+                  <img src="/Tick-Mark--Green.svg" alt="tick" />
+                </span>
                 <h4>Cash on Pickup / Delivery</h4>
               </div>
             </div>

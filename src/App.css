@@ -79,6 +79,14 @@ main {
   color: #004039;
 }
 
+.payment-header h3 a.active {
+  color: #FFF;
+}
+
+.scrolled.payment-header h3 a.active {
+  color: #004039;
+}
+
 /* for mobile nav  */
 .mobile-nav,
 .mobile-click-open {
@@ -2157,6 +2165,22 @@ button.ease-in-out:hover {
   color: hsla(0, 0%, 0%, 0.7);
 }
 
+.payment-method-picked {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  margin-right: 15px;
+}
+
+.payment-method-picked img {
+  display: none;
+}
+
+.payment-method-picked.picked img {
+  display: block;
+}
+
 .submit-first {
   width: 40%;
   margin-top: 35px;
@@ -2323,6 +2347,10 @@ button.ease-in-out:hover {
   .payment-banner-text {
     left: 8%;
   }
+
+  .payment-method-picked {
+    margin-right: 8px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -2404,7 +2432,31 @@ button.ease-in-out:hover {
   position: absolute;
   top: 30px;
   left: -60px;
+  display: flex;
+  gap: 3px;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.payment-info .back-arrow aside {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.payment-info .back-arrow img {
+  width: 17px;
+}
+
+.payment-info .back-arrow:hover {
+  color: #004039;
+}
+
+.payment-info .back-arrow:hover aside {
+  font-weight: 900;
+}
+
+.payment-info .back-arrow:hover img {
+  width: 20px;
 }
 
 .payment-info h2 {
