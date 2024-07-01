@@ -8,7 +8,10 @@ function PaymentInfo() {
                     <div className="linear-gradient-div"></div>
                     <div className="payment-info">
                         <Link to="/Payment">
-                            <img src="/bx-arrow-back.svg" alt="go back arrow" className="back-arrow" />
+                            <div className="back-arrow">
+                                <img src="/bx-arrow-back.svg" alt="go back arrow" />
+                                <aside>back</aside>
+                            </div>
                         </Link>
                         <h2>Payment Information</h2>
                         <form action="POST">
