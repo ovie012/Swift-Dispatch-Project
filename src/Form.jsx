@@ -2,64 +2,162 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 const Form = () => {
-   const [bookingDate, setBookingDate] = useState(new Date());
-   const [expectedDropOffDate, setExpectedDropOffDate] = useState(new Date());
+  const [bookingDate, setBookingDate] = useState(new Date());
+  const [expectedDropOffDate, setExpectedDropOffDate] = useState(new Date());
+  const [formValues, setFormValues] = useState({
+    name: "",
+    phoneNumber: "",
+    email: "",
+    service: "",
+    pickupLocation: "",
+    dropOffLocation: "",
+    receiverName: "",
+    receiverPhoneNumber: "",
+    notes: "",
+  });
+  const [errors, setErrors] = useState({});
 
-   const formatDate = (date) => {
-     return format(date, "yyyy-MM-dd");
-   };
+  const formatDate = (date) => {
+    return format(date, "yyyy-MM-dd");
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  const validate = () => {
+    let tempErrors = {};
+    if (!formValues.name) tempErrors.name = "Name is required";
+    if (!formValues.phoneNumber)
+      tempErrors.phoneNumber = "Phone number is required";
+    if (!/^\d+$/.test(formValues.phoneNumber))
+      tempErrors.phoneNumber = "Phone number is not valid";
+    if (!formValues.email) tempErrors.email = "Email is required";
+    if (!/\S+@\S+\.\S+/.test(formValues.email))
+      tempErrors.email = "Email is not valid";
+    if (!formValues.service)
+      tempErrors.service = "Service selection is required";
+    if (!formValues.pickupLocation)
+      tempErrors.pickupLocation = "Pickup location is required";
+    if (!formValues.dropOffLocation)
+      tempErrors.dropOffLocation = "Drop-off location is required";
+    if (!formValues.receiverName)
+      tempErrors.receiverName = "Receiver's name is required";
+    if (!formValues.receiverPhoneNumber)
+      tempErrors.receiverPhoneNumber = "Receiver's phone number is required";
+    if (!/^\d+$/.test(formValues.receiverPhoneNumber))
+      tempErrors.receiverPhoneNumber = "Receiver's phone number is not valid";
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      // Proceed to make payment
+      console.log("Form submitted successfully");
+    } else {
+      console.log("Validation failed");
+    }
+  };
 
   return (
-    <div className="  flex ">
-      <form className="bg-white rounded-lg  w-full">
+    <div className="flex">
+      <form className="bg-white rounded-lg w-full" onSubmit={handleSubmit}>
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          {/* Name */}
-          <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%] ">
+          <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Name</label>
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              className="input-field"
+              name="name"
+              value={formValues.name}
+              onChange={handleChange}
+            />
+            {errors.name && <p className="error text-red-500">{errors.name}</p>}
           </div>
-
-          {/* Phone Number */}
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Phone Number</label>
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              className="input-field"
+              name="phoneNumber"
+              value={formValues.phoneNumber}
+              onChange={handleChange}
+            />
+            {errors.phoneNumber && (
+              <p className="error text-red-500">{errors.phoneNumber}</p>
+            )}
           </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          {/* Email Address */}
-          <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%] ">
+          <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Email Address</label>
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              className="input-field"
+              name="email"
+              value={formValues.email}
+              onChange={handleChange}
+            />
+            {errors.email && (
+              <p className="error text-red-500">{errors.email}</p>
+            )}
           </div>
-
-          {/* Select Service */}
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Select Service</label>
-            <select className="input-field">
+            <select
+              className="input-field"
+              name="service"
+              value={formValues.service}
+              onChange={handleChange}
+            >
               <option value="">Select a service</option>
               <option value="service1">Service 1</option>
               <option value="service2">Service 2</option>
               <option value="service3">Service 3</option>
             </select>
+            {errors.service && (
+              <p className="error text-red-500">{errors.service}</p>
+            )}
           </div>
         </div>
         <div className="flex items-center justify-between">
-          {/* Pickup Location */}
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
             <label className="custom-label">Pickup Location</label>
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              className="input-field"
+              name="pickupLocation"
+              value={formValues.pickupLocation}
+              onChange={handleChange}
+            />
+            {errors.pickupLocation && (
+              <p className="error text-red-500">{errors.pickupLocation}</p>
+            )}
           </div>
-
-          {/* Drop-off Location */}
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
             <label className="custom-label">Drop-off Location</label>
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              className="input-field"
+              name="dropOffLocation"
+              value={formValues.dropOffLocation}
+              onChange={handleChange}
+            />
+            {errors.dropOffLocation && (
+              <p className="error text-red-500">{errors.dropOffLocation}</p>
+            )}
           </div>
         </div>
         <div className="flex items-center justify-between">
-          {/* Booking Date */}
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
             <label className="custom-label">Booking Date</label>
             <DatePicker
@@ -69,8 +167,6 @@ const Form = () => {
               placeholderText={formatDate(new Date())}
             />
           </div>
-
-          {/* Expected Drop-off Date */}
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
             <label className="custom-label">Expected Drop-off Date</label>
             <DatePicker
@@ -82,30 +178,49 @@ const Form = () => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          {/* Receiver's Name */}
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
             <label className="custom-label">Receiver's Name</label>
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              className="input-field"
+              name="receiverName"
+              value={formValues.receiverName}
+              onChange={handleChange}
+            />
+            {errors.receiverName && (
+              <p className="error text-red-500">{errors.receiverName}</p>
+            )}
           </div>
-
-          {/* Receiver's Phone Number */}
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
             <label className="custom-label">Receiver's Phone Number</label>
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              className="input-field"
+              name="receiverPhoneNumber"
+              value={formValues.receiverPhoneNumber}
+              onChange={handleChange}
+            />
+            {errors.receiverPhoneNumber && (
+              <p className="error text-red-500">{errors.receiverPhoneNumber}</p>
+            )}
           </div>
         </div>
-
-        {/* Notes/Instructions */}
         <div className="mb-4 flex flex-col gap-2">
           <label className="custom-label">Notes/Instructions for Rider</label>
-          <textarea className="w-full px-2 lg:px-4 lg:py-3 py-3  border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"></textarea>
+          <textarea
+            className="w-full px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
+            name="notes"
+            value={formValues.notes}
+            onChange={handleChange}
+          ></textarea>
         </div>
-
-        {/* Submit Button */}
         <div>
-          <button type="submit" className="submit-first">
-            Proceed To Make Payment
-          </button>
+          <Link to="/Payment">
+            {" "}
+            <button type="submit" className="submit-first">
+              Proceed To Make Payment
+            </button>
+          </Link>
         </div>
       </form>
     </div>

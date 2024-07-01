@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -9,7 +9,46 @@ import DamagedPhone from "./assets/RAR--Illustration-Damaged-Phone.svg";
 import CustomCarousel from "./Carousel";
 import FileUpload from "./FileUpload";
 import Curvy from "./assets/RAR--Shape-Curvy-Dashed-Arrow.svg";
+
 function Report() {
+  const [formValues, setFormValues] = useState({
+    riderName: "",
+    riderId: "",
+    location: "",
+    report: "",
+  });
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  const validate = () => {
+    let tempErrors = {};
+    if (!formValues.riderName)
+      tempErrors.riderName = "Rider's name is required";
+    if (!formValues.riderId)
+      tempErrors.riderId = "Rider's ID number is required";
+    if (!formValues.location) tempErrors.location = "Location is required";
+    if (!formValues.report) tempErrors.report = "Detailed report is required";
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      // Submit the report
+      console.log("Report submitted successfully");
+    } else {
+      console.log("Validation failed");
+    }
+  };
+
   return (
     <>
       <Header />
@@ -24,7 +63,7 @@ function Report() {
                 <br />
                 Our Riders
               </p>
-              <h5 className="text-[0.6rem] sm:text-base font-bold lg:tracking-wide text-[#5F5F5F] text-justify">
+              <h5 className="text-[0.6rem] lg:text-base font-bold lg:tracking-wide text-[#5F5F5F] text-justify">
                 We value your feedback! If you've had a issue with one of our
                 riders,
                 <br className="lg:block hidden" /> please let us know so we can
@@ -75,13 +114,7 @@ function Report() {
                     className="w-50 h-50"
                   />
                   <div className="flex flex-col items-center mx-5 line-div">
-                    {/* <img
-                      src="/RAR--square.png"
-                      alt="Square"
-                      className="w-[50%] h-[50%]"
-                    /> */}
                     <span className="line"></span>
-                    {/* <img src="/RAR--line.png" alt="Line" className="h-[500px] w-[60px]" /> */}
                   </div>
                   <div className="max-w-md">
                     <h1 className="text-lg font-bold">
@@ -102,12 +135,6 @@ function Report() {
                   />
                   <div className="flex flex-col items-center mx-5">
                     <span className="line-box"></span>
-                    {/* <img
-                      src="/RAR--square.png"
-                      alt="Square"
-                      className="w-[50%] h-[50%]"
-                    /> */}
-                    {/* <img src="/RAR--line.png" alt="Line" className="" /> */}
                   </div>
                   <div className="max-w-md">
                     <h1 className="text-lg font-bold">
@@ -127,12 +154,7 @@ function Report() {
                     className="w-50 h-50"
                   />
                   <div className="flex flex-col items-center mx-5">
-                    {/* <img
-                      src="/RAR--square.png"
-                      alt="Square"
-                      className="w-[50%] h-[50%]"
-                    /> */}
-                    {/* <img src="/RAR--line.png" alt="Line" className="" /> */}
+                    <span className="line-box"></span>
                   </div>
                   <div className="max-w-md">
                     <h1 className="text-lg font-bold">
@@ -168,27 +190,41 @@ function Report() {
               Start Your Report
             </h1>
             <div className="mt-10">
-              <form className=" rounded-lg w-full mb-5 ">
+              <form className="rounded-lg w-full mb-5" onSubmit={handleSubmit}>
                 <div className="flex flex-col lg:flex-row items-start lg:items-stretch justify-between lg:gap-4">
                   <div className="w-full lg:w-1/2">
-                    {/* Name */}
+                    {/* Rider's Name */}
                     <div className="mb-4 flex flex-col gap-2 w-full">
                       <label className="custom-label">Rider's Name</label>
                       <input
                         type="text"
                         placeholder="Adamu Musa"
                         className="input-field"
+                        name="riderName"
+                        value={formValues.riderName}
+                        onChange={handleChange}
                       />
+                      {errors.riderName && (
+                        <p className=" error text-red-500">
+                          {errors.riderName}
+                        </p>
+                      )}
                     </div>
 
-                    {/* ID Number */}
+                    {/* Rider's ID Number */}
                     <div className="mb-4 flex flex-col gap-2 w-full">
                       <label className="custom-label">Rider's ID Number</label>
                       <input
                         type="text"
                         placeholder="SD1176"
                         className="input-field"
+                        name="riderId"
+                        value={formValues.riderId}
+                        onChange={handleChange}
                       />
+                      {errors.riderId && (
+                        <p className="error text-red-500">{errors.riderId}</p>
+                      )}
                     </div>
 
                     {/* Location */}
@@ -198,7 +234,13 @@ function Report() {
                         type="text"
                         placeholder="Sangotedo"
                         className="input-field"
+                        name="location"
+                        value={formValues.location}
+                        onChange={handleChange}
                       />
+                      {errors.location && (
+                        <p className="error text-red-500">{errors.location}</p>
+                      )}
                     </div>
                   </div>
 
@@ -207,36 +249,41 @@ function Report() {
                       Write Your Detailed Report
                     </label>
                     <textarea
-                      placeholder="Hello, I’m Jessica my delivery  came in..."
+                      placeholder="Hello, I’m Jessica my delivery came in..."
                       className="flex-grow px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 bg-[#EFEFEF]"
+                      name="report"
+                      value={formValues.report}
+                      onChange={handleChange}
                     ></textarea>
+                    {errors.report && (
+                      <p className="error text-red-500">{errors.report}</p>
+                    )}
                   </div>
                 </div>
+                <FileUpload />
               </form>
-              <FileUpload />
             </div>
           </div>
 
           <div className="bg-[#DCFFFC] mt-10 lg:mt-20 mb-5">
-            <div className=" w-[90%] mx-auto flex flex-col gap-5 lg:flex-row items-center justify-between pb-5">
-              <div className="w-full ">
+            <div className="w-[90%] mx-auto flex flex-col gap-5 lg:flex-row items-center justify-between pb-5">
+              <div className="w-full">
                 <img
                   src="/RAR--Illustration-Call-Attendant-Web.png"
                   alt="call attendant"
-                 
                 />
               </div>
-              <div className="flex flex-col items-stretch justify-between lg:gap-10 gap-5 w-full ">
+              <div className="flex flex-col items-stretch justify-between lg:gap-10 gap-5 w-full">
                 <div className="flex flex-col gap-2">
                   <h1 className="text-[#004039] font-medium lg:text-[1.8rem] text-xl">
                     Why Report?
                   </h1>
-                  <h3 className="text-[#5F5F5F] font-normal text-[1rem] ">
+                  <h3 className="text-[#5F5F5F] font-normal text-[1rem]">
                     Your feedback matters! By reporting issues, you'll help us:
                   </h3>
                 </div>
-                <div className="text-[#5F5F5F]  text-[1rem] flex flex-col gap-3">
-                  <div className="flex items-center  gap-3">
+                <div className="text-[#5F5F5F] text-[1rem] flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
                     <img
                       src="/public/RAR--Icon-Charm-Circle-Tick.svg"
                       alt="tick"
@@ -254,7 +301,7 @@ function Report() {
                     />
                     <h3>Ensure our accountability and transparency</h3>
                   </div>
-                  <div className="flex items-center  gap-3">
+                  <div className="flex items-center gap-3">
                     <img
                       src="/public/RAR--Icon-Charm-Circle-Tick.svg"
                       alt="tick"
