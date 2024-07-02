@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
-import { Link } from "react-router-dom";
+import "./Payment.jsx"
 
 const Form = () => {
   const [bookingDate, setBookingDate] = useState(new Date());
@@ -61,12 +61,14 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Proceed to make payment
       console.log("Form submitted successfully");
+        window.location.href = "/Payment";
     } else {
       console.log("Validation failed");
     }
   };
+
+  
 
   return (
     <div className="flex">
@@ -214,13 +216,11 @@ const Form = () => {
             onChange={handleChange}
           ></textarea>
         </div>
+      
         <div>
-          <Link to="/Payment">
-            {" "}
-            <button type="submit" className="submit-first">
-              Proceed To Make Payment
-            </button>
-          </Link>
+          <button type="submit" className="submit-first">
+            Proceed To Make Payment
+          </button>
         </div>
       </form>
     </div>

@@ -42,8 +42,8 @@ function Report() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Submit the report
       console.log("Report submitted successfully");
+          alert("Report submitted successfully!");
     } else {
       console.log("Validation failed");
     }
@@ -285,7 +285,7 @@ function Report() {
                 <div className="text-[#5F5F5F] text-[1rem] flex flex-col gap-3">
                   <div className="flex items-center gap-3">
                     <img
-                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      src="/RAR--Icon-Charm-Circle-Tick.svg"
                       alt="tick"
                       width={20}
                       height={20}
