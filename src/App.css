@@ -3261,85 +3261,8 @@ section.last-update-location p:nth-of-type(2) {
 
 
 
-.carousel-container {
-  position: relative;
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-}
+/* App.css */
 
-.carousel-inner {
-  width: 90%;
-  display: flex;
-
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
-  margin: auto;
-}
-
-.carousel-item {
-  flex: 0 0 auto;
-  width: calc(100% / 3);
-  text-align: center;
-  overflow: hidden;
-
-}
-
-.carousel-image {
-  width: 40%;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-.carousel-text {
-  padding: 1rem;
- 
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: black;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel-control-prev {
-  left: 10px;
-}
-
-.carousel-control-next {
-  right: 10px;
-}
-
-@media (max-width: 1024px) {
-  .carousel-item {
-    width: calc(100% / 2);
-    /* For two images on small screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-control-prev {
-    left: 5px;
-  }
-.carousel-image {
-  width: 40%;
-  height: auto;
-  display: block;
-}
-  .carousel-control-next {
-    right: 5px;
-  }
-}
 
 /* fileUpload styling */
 .file-upload {
