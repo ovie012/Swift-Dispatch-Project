@@ -72,7 +72,7 @@ function Report() {
                   <img
                     src={stopwatch}
                     alt="Stopwatch icon"
-                    className="w-50 h-50"
+                    className="w-50 h-50 line-images"
                   />
                   <div className="flex flex-col items-center mx-5 line-div">
                     {/* <img
@@ -84,10 +84,10 @@ function Report() {
                     {/* <img src="/RAR--line.png" alt="Line" className="h-[500px] w-[60px]" /> */}
                   </div>
                   <div className="max-w-md">
-                    <h1 className="text-lg font-bold">
+                    <h1 className="text-[1rem] text-lg font-bold">
                       Late Arrival or Not Showing Up
                     </h1>
-                    <h5 className="text-sm">
+                    <h5 className="text-[0.7rem] text-sm">
                       Have you had an experience of our riders not showing up
                       with your package without a tangible reason, or continuous
                       late delivery of your product?
@@ -98,7 +98,7 @@ function Report() {
                   <img
                     src={TwoPeople}
                     alt="Two People icon"
-                    className="w-50 h-50"
+                    className="w-50 h-50 line-images"
                   />
                   <div className="flex flex-col items-center mx-5">
                     <span className="line-box"></span>
@@ -110,10 +110,10 @@ function Report() {
                     {/* <img src="/RAR--line.png" alt="Line" className="" /> */}
                   </div>
                   <div className="max-w-md">
-                    <h1 className="text-lg font-bold">
+                    <h1 className="text-[1rem] sm:text-lg font-bold">
                       Rude And Unprofessional Attitude
                     </h1>
-                    <h5 className="text-sm">
+                    <h5 className="text-[0.7rem] sm:text-sm">
                       We at SwiftDispatch frown at any form of
                       unprofessionalism. Has any of our riders spoken to you
                       rudely or attended to you in an inappropriate manner?
@@ -124,7 +124,7 @@ function Report() {
                   <img
                     src={DamagedPhone}
                     alt="Damaged Phone icon"
-                    className="w-50 h-50"
+                    className="w-50 h-50 line-images"
                   />
                   <div className="flex flex-col items-center mx-5">
                     {/* <img
@@ -135,10 +135,10 @@ function Report() {
                     {/* <img src="/RAR--line.png" alt="Line" className="" /> */}
                   </div>
                   <div className="max-w-md">
-                    <h1 className="text-lg font-bold">
+                    <h1 className="text-[1rem] text-lg font-bold">
                       Mishandling or Loss of Package
                     </h1>
-                    <h5 className="text-sm">
+                    <h5 className="text-[0.7rem] text-sm">
                       Have you met your package in a damaged state or have you
                       lost a package as a result of carelessness of our riders?
                       Do let us know about your experience.
@@ -238,7 +238,7 @@ function Report() {
                 <div className="text-[#5F5F5F]  text-[1rem] flex flex-col gap-3">
                   <div className="flex items-center  gap-3">
                     <img
-                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      src="/RAR--Icon-Charm-Circle-Tick.svg"
                       alt="tick"
                       width={20}
                       height={20}
