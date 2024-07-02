@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
-import "./Payment.jsx"
+import "./Payment.jsx";
 
 const Form = () => {
   const [bookingDate, setBookingDate] = useState(new Date());
@@ -62,13 +62,11 @@ const Form = () => {
     e.preventDefault();
     if (validate()) {
       console.log("Form submitted successfully");
-        window.location.href = "/Payment";
+      window.location.href = "/Payment";
     } else {
       console.log("Validation failed");
     }
   };
-
-  
 
   return (
     <div className="flex">
@@ -78,7 +76,7 @@ const Form = () => {
             <label className="custom-label">Name</label>
             <input
               type="text"
-              className="input-field"
+              className="input-field text-base"
               name="name"
               value={formValues.name}
               onChange={handleChange}
@@ -89,7 +87,7 @@ const Form = () => {
             <label className="custom-label">Phone Number</label>
             <input
               type="text"
-              className="input-field"
+              className="input-field text-base"
               name="phoneNumber"
               value={formValues.phoneNumber}
               onChange={handleChange}
@@ -104,7 +102,7 @@ const Form = () => {
             <label className="custom-label">Email Address</label>
             <input
               type="text"
-              className="input-field"
+              className="input-field text-base"
               name="email"
               value={formValues.email}
               onChange={handleChange}
@@ -116,7 +114,7 @@ const Form = () => {
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Select Service</label>
             <select
-              className="input-field"
+              className="input-field text-base"
               name="service"
               value={formValues.service}
               onChange={handleChange}
@@ -136,7 +134,7 @@ const Form = () => {
             <label className="custom-label">Pickup Location</label>
             <input
               type="text"
-              className="input-field"
+              className="input-field text-base"
               name="pickupLocation"
               value={formValues.pickupLocation}
               onChange={handleChange}
@@ -149,7 +147,7 @@ const Form = () => {
             <label className="custom-label">Drop-off Location</label>
             <input
               type="text"
-              className="input-field"
+              className="input-field text-base"
               name="dropOffLocation"
               value={formValues.dropOffLocation}
               onChange={handleChange}
@@ -165,7 +163,7 @@ const Form = () => {
             <DatePicker
               selected={bookingDate}
               onChange={(date) => setBookingDate(date)}
-              className="input-field"
+              className="input-field text-base"
               placeholderText={formatDate(new Date())}
             />
           </div>
@@ -174,7 +172,7 @@ const Form = () => {
             <DatePicker
               selected={expectedDropOffDate}
               onChange={(date) => setExpectedDropOffDate(date)}
-              className="input-field"
+              className="input-field text-base"
               placeholderText={formatDate(new Date())}
             />
           </div>
@@ -184,7 +182,7 @@ const Form = () => {
             <label className="custom-label">Receiver's Name</label>
             <input
               type="text"
-              className="input-field"
+              className="input-field text-base"
               name="receiverName"
               value={formValues.receiverName}
               onChange={handleChange}
@@ -197,7 +195,7 @@ const Form = () => {
             <label className="custom-label">Receiver's Phone Number</label>
             <input
               type="text"
-              className="input-field"
+              className="input-field text-base"
               name="receiverPhoneNumber"
               value={formValues.receiverPhoneNumber}
               onChange={handleChange}
@@ -210,13 +208,12 @@ const Form = () => {
         <div className="mb-4 flex flex-col gap-2">
           <label className="custom-label">Notes/Instructions for Rider</label>
           <textarea
-            className="w-full px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
+            className="w-full px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 text-base"
             name="notes"
             value={formValues.notes}
             onChange={handleChange}
           ></textarea>
         </div>
-      
         <div>
           <button type="submit" className="submit-first">
             Proceed To Make Payment

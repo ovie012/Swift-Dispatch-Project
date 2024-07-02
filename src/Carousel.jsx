@@ -25,7 +25,11 @@ const CustomCarousel = () => {
     <div className="flex flex-row items-center justify-between w-[90%] mx-auto my-10">
       {images.map((image, index) => (
         <React.Fragment key={index}>
-          <div className="flex flex-col items-center justify-between">
+          <div
+            className={`flex flex-col items-center justify-between ${
+              index === images.length - 1 ? "hidden lg:flex" : ""
+            }`}
+          >
             <div className="">
               <img
                 src={image.src}

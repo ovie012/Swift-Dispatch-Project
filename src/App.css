@@ -3259,6 +3259,17 @@ section.last-update-location p:nth-of-type(2) {
   }
 }
 
+.last-image {
+  display: block;
+  /* Default display */
+}
+
+@media (max-width: 768px) {
+  .last-image {
+    display: none;
+  }
+}
+
 /* fileUpload styling */
 .file-upload {
   display: flex;
