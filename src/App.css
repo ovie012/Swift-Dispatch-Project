@@ -53,10 +53,10 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
 
 /* body section */
 body {
@@ -64,9 +64,9 @@ body {
   overflow-x: hidden;
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
   display: none;
-}
+} */
 
 main {
   width: 100%;
