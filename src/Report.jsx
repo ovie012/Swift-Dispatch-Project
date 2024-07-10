@@ -42,8 +42,8 @@ function Report() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Submit the report
       console.log("Report submitted successfully");
+      alert("Report submitted successfully!");
     } else {
       console.log("Validation failed");
     }
@@ -96,7 +96,7 @@ function Report() {
 
           <div className="bg-[#DCFFFC] w-full reporting">
             <div className="lg:max-w-4xl mx-auto py-10 w-[90%]">
-              <div className="flex flex-col lg:gap-5 what-to-report">
+              <div className="flex flex-col lg:gap-5 what-to-report lg:relative lg:left-[-10%]">
                 <h1 className="text-[1.4rem] sm:text-2xl text-[#004039] font-bold leading-[2.8rem]">
                   What To Report
                 </h1>
@@ -199,7 +199,7 @@ function Report() {
                       <input
                         type="text"
                         placeholder="Adamu Musa"
-                        className="input-field"
+                        className="input-field text-base"
                         name="riderName"
                         value={formValues.riderName}
                         onChange={handleChange}
@@ -217,7 +217,7 @@ function Report() {
                       <input
                         type="text"
                         placeholder="SD1176"
-                        className="input-field"
+                        className="input-field text-base"
                         name="riderId"
                         value={formValues.riderId}
                         onChange={handleChange}
@@ -233,7 +233,7 @@ function Report() {
                       <input
                         type="text"
                         placeholder="Sangotedo"
-                        className="input-field"
+                        className="input-field text-base"
                         name="location"
                         value={formValues.location}
                         onChange={handleChange}
@@ -250,7 +250,7 @@ function Report() {
                     </label>
                     <textarea
                       placeholder="Hello, I’m Jessica my delivery came in..."
-                      className="flex-grow px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 bg-[#EFEFEF]"
+                      className="flex-grow px-2 lg:px-4 lg:py-3 py-3 border text-base border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 bg-[#EFEFEF]"
                       name="report"
                       value={formValues.report}
                       onChange={handleChange}
