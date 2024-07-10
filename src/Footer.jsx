@@ -4,7 +4,7 @@ function Footer() {
       <footer>
         <div className="footer-container">
           <div className="footer-logo">
-            <h1>SwiftDispatch</h1>
+            <h1> <img src="/SD-Logo--Favicon.svg" alt="Swift Dispatch logo" /> SwiftDispatch</h1>
             <div>
               <img src="/LP--FT-Icon-GPS.svg" alt="location icon" />
               <h6>Nigeria - English</h6>

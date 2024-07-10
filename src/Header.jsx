@@ -42,7 +42,7 @@ function Header() {
     <>
       <header className={`${isScrolled ? "scrolled" : ""} ${getHeaderClass()}`}>
         <div className="header">
-          <h2 className="logo">SwiftDispatch</h2>
+          <h2 className="logo"> <img src="/SD-Logo--Favicon.svg" alt="Swift Dispatch logo" /> SwiftDispatch</h2>
           <nav className="nav">
               <h3>
                 <NavLink to="/">
