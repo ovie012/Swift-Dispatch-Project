@@ -4,6 +4,18 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 function Payment() {
+
+  const [selectedPayment, setSelectedPayment] = useState("");
+  const [selectedDelivery, setSelectedDelivery] = useState("");
+
+  const handlePaymentClick = (method) => {
+    setSelectedPayment(method);
+  };
+
+  const handleDeliveryClick = (service) => {
+    setSelectedDelivery(service);
+  };
+
   return (
     <>
       <Header />
@@ -64,7 +76,10 @@ function Payment() {
             <div className="delivery">
               <h6>Delivery Service</h6>
               <div className="delivery-service">
-                <div>
+                <div className={`delivery-service-chosen ${
+                    selectedDelivery === "express" ? "chosen" : ""
+                  }`}
+                  onClick={() => handleDeliveryClick("express")} >
                   <img
                     src="/PS--Icon-Delivery-Truck.svg"
                     alt="delivery truck"
@@ -74,7 +89,10 @@ function Payment() {
                     <h5>We ship in 1-2 Hours</h5>
                   </section>
                 </div>
-                <div>
+                <div className={`delivery-service-chosen ${
+                    selectedDelivery === "standard" ? "chosen" : ""
+                  }`}
+                  onClick={() => handleDeliveryClick("standard")} >
                   <img
                     src="/PS--Icon-Delivery-Truck.svg"
                     alt="delivery truck"
@@ -84,7 +102,10 @@ function Payment() {
                     <h5>We ship in 24 Hours</h5>
                   </section>
                 </div>
-                <div>
+                <div className={`delivery-service-chosen ${
+                    selectedDelivery === "interstate" ? "chosen" : ""
+                  }`}
+                  onClick={() => handleDeliveryClick("interstate")} >
                   <img
                     src="/PS--Icon-Delivery-Truck.svg"
                     alt="delivery truck"
@@ -104,8 +125,10 @@ function Payment() {
             </div>
             <div className="payment-options">
               <h6>Payment Options</h6>
-              <div>
-                <span className="payment-method-picked">
+              <div onClick={() => handlePaymentClick("bankCard")} >
+                <span className={`payment-method-picked ${
+                    selectedPayment === "bankCard" ? "picked" : ""
+                  }`}>
                   <img src="/Tick-Mark--Green.svg" alt="tick" />
                 </span>
                 <section>
@@ -118,14 +141,18 @@ function Payment() {
                   <img src="/PS--Logo-Mastercard.svg" alt="Master card logo" />
                 </section>
               </div>
-              <div>
-                <span className="payment-method-picked">
+              <div onClick={() => handlePaymentClick("bankTransfer")} >
+                <span className={`payment-method-picked ${
+                    selectedPayment === "bankTransfer" ? "picked" : ""
+                  }`}>
                   <img src="/Tick-Mark--Green.svg" alt="tick" />
                 </span>
                 <h4>Bank Transfer</h4>
               </div>
-              <div>
-                <span className="payment-method-picked">
+              <div onClick={() => handlePaymentClick("cash")} >
+                <span className={`payment-method-picked ${
+                    selectedPayment === "cash" ? "picked" : ""
+                  }`}>
                   <img src="/Tick-Mark--Green.svg" alt="tick" />
                 </span>
                 <h4>Cash on Pickup / Delivery</h4>

@@ -2108,6 +2108,19 @@ button.ease-in-out:hover {
   color: hsla(0, 0%, 0%, 0.7);
 }
 
+.delivery-service-chosen {
+  background: transparent;
+  transition: 0.2s ease-in-out;
+}
+
+.delivery-service-chosen:hover {
+  background: #c6fffb;
+}
+
+.delivery-service-chosen.chosen {
+  background: #baf8f4;
+}
+
 .estimated-price form {
   width: 28%;
 }
