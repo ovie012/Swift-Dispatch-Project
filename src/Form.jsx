@@ -81,7 +81,7 @@ const Form = () => {
               value={formValues.name}
               onChange={handleChange}
             />
-            {errors.name && <p className="error text-red-500">{errors.name}</p>}
+            {errors.name && <p className="error text-red-500 text-xs">{errors.name}</p>}
           </div>
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Phone Number</label>
@@ -93,7 +93,7 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.phoneNumber && (
-              <p className="error text-red-500">{errors.phoneNumber}</p>
+              <p className="error text-red-500 text-xs">{errors.phoneNumber}</p>
             )}
           </div>
         </div>
@@ -108,7 +108,7 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.email && (
-              <p className="error text-red-500">{errors.email}</p>
+              <p className="error text-red-500 text-xs">{errors.email}</p>
             )}
           </div>
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
@@ -125,7 +125,7 @@ const Form = () => {
               <option value="service3">Service 3</option>
             </select>
             {errors.service && (
-              <p className="error text-red-500">{errors.service}</p>
+              <p className="error text-red-500 text-xs">{errors.service}</p>
             )}
           </div>
         </div>
@@ -140,7 +140,7 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.pickupLocation && (
-              <p className="error text-red-500">{errors.pickupLocation}</p>
+              <p className="error text-red-500 text-xs">{errors.pickupLocation}</p>
             )}
           </div>
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
@@ -153,7 +153,7 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.dropOffLocation && (
-              <p className="error text-red-500">{errors.dropOffLocation}</p>
+              <p className="error text-red-500 text-xs">{errors.dropOffLocation}</p>
             )}
           </div>
         </div>
@@ -188,7 +188,7 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.receiverName && (
-              <p className="error text-red-500">{errors.receiverName}</p>
+              <p className="error text-red-500 text-xs">{errors.receiverName}</p>
             )}
           </div>
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
@@ -201,7 +201,7 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.receiverPhoneNumber && (
-              <p className="error text-red-500">{errors.receiverPhoneNumber}</p>
+              <p className="error text-red-500 text-xs">{errors.receiverPhoneNumber}</p>
             )}
           </div>
         </div>

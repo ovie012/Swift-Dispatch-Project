@@ -54,11 +54,7 @@ function Header() {
                   Track Order
                 </NavLink>
               </h3>
-              <h3>
-                <NavLink to="/Payment">
-                  Payment
-                </NavLink>
-              </h3>
+             
               <h3>
                <NavLink to="/Report">
                  Report a Rider
@@ -84,9 +80,7 @@ function Header() {
               <li>
                 <NavLink to="/Track">Track Order</NavLink>
               </li>
-              <li>
-                <NavLink to="/Payment">Payment</NavLink>
-              </li>
+             
               <li>
                 {" "}
                 <NavLink to="/Report">Report a Rider</NavLink>

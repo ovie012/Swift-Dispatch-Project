@@ -205,7 +205,7 @@ function Report() {
                         onChange={handleChange}
                       />
                       {errors.riderName && (
-                        <p className=" error text-red-500">
+                        <p className=" error text-red-500 text-xs">
                           {errors.riderName}
                         </p>
                       )}
@@ -223,7 +223,7 @@ function Report() {
                         onChange={handleChange}
                       />
                       {errors.riderId && (
-                        <p className="error text-red-500">{errors.riderId}</p>
+                        <p className="error text-red-500 text-xs">{errors.riderId}</p>
                       )}
                     </div>
 
@@ -239,7 +239,7 @@ function Report() {
                         onChange={handleChange}
                       />
                       {errors.location && (
-                        <p className="error text-red-500">{errors.location}</p>
+                        <p className="error text-red-500 text-xs">{errors.location}</p>
                       )}
                     </div>
                   </div>
@@ -256,7 +256,7 @@ function Report() {
                       onChange={handleChange}
                     ></textarea>
                     {errors.report && (
-                      <p className="error text-red-500">{errors.report}</p>
+                      <p className="error text-red-500 text-xs">{errors.report}</p>
                     )}
                   </div>
                 </div>
