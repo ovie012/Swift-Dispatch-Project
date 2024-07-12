@@ -143,7 +143,9 @@ function LandingPage() {
                   <li>Increased Efficiency</li>
                   <li>Flexible Services</li>
                   <li>Exceptional Customer Services</li>
-                  <button className="quote-button">Get a Quote now</button>
+                  <Link to="/Book">
+                    <button className="quote-button">Get a Quote now</button>
+                  </Link>
                 </ul>
               </div>
             </section>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +42,9 @@ function Header() {
     <>
       <header className={`${isScrolled ? "scrolled" : ""} ${getHeaderClass()}`}>
         <div className="header">
-          <h2 className="logo">SwiftDispatch</h2>
+          <Link to="/">
+            <h2 className="logo"> <img src="/SD-Logo--Favicon.svg" alt="Swift Dispatch logo" /> SwiftDispatch</h2>
+          </Link>
           <nav className="nav">
               <h3>
                 <NavLink to="/">

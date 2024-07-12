@@ -53,10 +53,10 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
 
 /* body section */
 body {
@@ -64,9 +64,9 @@ body {
   overflow-x: hidden;
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
   display: none;
-}
+} */
 
 main {
   width: 100%;
@@ -243,6 +243,13 @@ main {
   }
 }
 
+@media only screen and (max-width:500px) {
+
+  .logo img {
+    width: 30px;
+  }
+}
+
 /* header section */
 
 
@@ -289,6 +296,13 @@ nav.nav {
   color: #004039;
   /* color: white; */
   cursor: pointer;
+}
+
+.logo img {
+  display: inline;
+  width: 40px;
+  margin-bottom: 5px;
+  /* margin-right: 15px; */
 }
 
 nav.nav h3 {
@@ -388,6 +402,12 @@ footer {
   font-size: 40px;
   font-weight: 600;
   color: #DCFFFC;
+}
+
+.footer-logo h1 img {
+  display: inline;
+  width: 45px;
+  margin-bottom: 5px;
 }
 
 .footer-logo div {
@@ -531,6 +551,10 @@ footer {
 
   .footer-logo div h6 {
     font-size: 0.9rem;
+  }
+
+  .footer-logo h1 img {
+    width: 35px;
   }
 
   .footer-nav nav ul li {
@@ -2093,6 +2117,19 @@ button.ease-in-out:hover {
   font-size: 0.8rem;
   font-weight: 500;
   color: hsla(0, 0%, 0%, 0.7);
+}
+
+.delivery-service-chosen {
+  background: transparent;
+  transition: 0.2s ease-in-out;
+}
+
+.delivery-service-chosen:hover {
+  background: #c6fffb;
+}
+
+.delivery-service-chosen.chosen {
+  background: #baf8f4;
 }
 
 .estimated-price form {
