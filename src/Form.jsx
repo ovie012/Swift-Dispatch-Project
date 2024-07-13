@@ -82,7 +82,9 @@ const Form = () => {
               onChange={handleChange}
               placeholder="Chigozie Tosin"
             />
-            {errors.name && <p className="error text-red-500 text-xs">{errors.name}</p>}
+            {errors.name && (
+              <p className="error text-red-500 text-xs">{errors.name}</p>
+            )}
           </div>
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Phone Number</label>
@@ -122,10 +124,9 @@ const Form = () => {
               value={formValues.service}
               onChange={handleChange}
             >
-              <option value="">Select a service</option>
-              <option value="service1">Door-To-Door</option>
-              <option value="service2">Interstate Delivery</option>
-              <option value="service3">Distribution Delivery</option>
+              <option value="">Door-To-Door</option>
+              <option value="service1">Interstate Delivery</option>
+              <option value="service2">Distribution Delivery</option>
             </select>
             {errors.service && (
               <p className="error text-red-500 text-xs">{errors.service}</p>
@@ -144,7 +145,9 @@ const Form = () => {
               placeholder="No 1 Mainland Off Island Road Lagos"
             />
             {errors.pickupLocation && (
-              <p className="error text-red-500 text-xs">{errors.pickupLocation}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.pickupLocation}
+              </p>
             )}
           </div>
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
@@ -158,7 +161,9 @@ const Form = () => {
               placeholder="No 1 Island Off Mainland Road Lagos"
             />
             {errors.dropOffLocation && (
-              <p className="error text-red-500 text-xs">{errors.dropOffLocation}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.dropOffLocation}
+              </p>
             )}
           </div>
         </div>
@@ -194,7 +199,9 @@ const Form = () => {
               placeholder="Tosin Chigozie"
             />
             {errors.receiverName && (
-              <p className="error text-red-500 text-xs">{errors.receiverName}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.receiverName}
+              </p>
             )}
           </div>
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
@@ -208,7 +215,9 @@ const Form = () => {
               placeholder="+234 901 2345 678"
             />
             {errors.receiverPhoneNumber && (
-              <p className="error text-red-500 text-xs">{errors.receiverPhoneNumber}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.receiverPhoneNumber}
+              </p>
             )}
           </div>
         </div>
@@ -217,6 +226,7 @@ const Form = () => {
           <textarea
             className="w-full px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 text-base"
             name="notes"
+            placeholder=" Give your instruction about the delivery."
             value={formValues.notes}
             onChange={handleChange}
           ></textarea>

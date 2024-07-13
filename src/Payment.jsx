@@ -4,9 +4,16 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 function Payment() {
-
   const [selectedPayment, setSelectedPayment] = useState("");
   const [selectedDelivery, setSelectedDelivery] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [estimatedPrice, setEstimatedPrice] = useState(0);
+  const [origin, setOrigin] = useState("");
+  const [destination, setDestination] = useState("");
+  const [description, setDescription] = useState("");
+  const [weight, setWeight] = useState("");
+  const [value, setValue] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handlePaymentClick = (method) => {
     setSelectedPayment(method);
@@ -14,6 +21,81 @@ function Payment() {
 
   const handleDeliveryClick = (service) => {
     setSelectedDelivery(service);
+  };
+
+  useEffect(() => {
+    const calculateEstimatedPrice = () => {
+      if (!value || !weight || !selectedDelivery) {
+        setEstimatedPrice(0);
+        return;
+      }
+
+      let deliveryAmount = 0;
+      switch (selectedDelivery) {
+        case "express":
+          deliveryAmount = 10;
+          break;
+        case "standard":
+          deliveryAmount = 20;
+          break;
+        case "interstate":
+          deliveryAmount = 5;
+          break;
+        default:
+          deliveryAmount = 0;
+      }
+
+      let price = (value * weight) / deliveryAmount;
+
+      if (price < 2000) {
+        price = 2000;
+      } else if (price > 30000) {
+        price = 30000;
+      } else {
+        price;
+      }
+
+      setEstimatedPrice(price.toFixed(2));
+    };
+
+    calculateEstimatedPrice();
+  }, [value, weight, selectedDelivery]);
+
+  useEffect(() => {
+    const validateForm = () => {
+      if (
+        selectedPayment &&
+        selectedDelivery &&
+        origin &&
+        destination &&
+        description &&
+        weight &&
+        value
+      ) {
+        setIsFormValid(true);
+        setErrorMessage("");
+      } else {
+        setIsFormValid(false);
+      }
+    };
+    validateForm();
+  }, [
+    selectedPayment,
+    selectedDelivery,
+    origin,
+    destination,
+    description,
+    weight,
+    value,
+  ]);
+
+  const handleSubmit = (event) => {
+    if (!isFormValid) {
+      event.preventDefault();
+      setErrorMessage(
+        "Please fill in all fields and select a delivery service and payment option."
+      );
+    }
   };
 
   return (
@@ -36,8 +118,7 @@ function Payment() {
             </h1>
             <h5 className="text-[0.7rem] sm:text-xl text-[#DCFFFC] font-bold tracking-wide">
               Enjoy <span>20</span>% discount on your first booking.
-            </h5>{" "}
-            {/* the use of span in this line is incase with time the discount percentage needs to be changes */}
+            </h5>
           </div>
         </div>
         <div className="fill-form">
@@ -45,11 +126,21 @@ function Payment() {
             <div className="first-forms">
               <form action="post">
                 <h6>Origin</h6>
-                <input type="text" placeholder="Set Pickup Location" />
+                <input
+                  type="text"
+                  placeholder="Set Pickup Location"
+                  value={origin}
+                  onChange={(e) => setOrigin(e.target.value)}
+                />
               </form>
               <form action="post">
                 <h6>Delivery Location</h6>
-                <input type="text" placeholder="Set Destination" />
+                <input
+                  type="text"
+                  placeholder="Set Destination"
+                  value={destination}
+                  onChange={(e) => setDestination(e.target.value)}
+                />
               </form>
             </div>
             <div className="second-form">
@@ -60,26 +151,40 @@ function Payment() {
                   id="message"
                   rows={4}
                   placeholder="Describe how big and wide the package is. state if the package is fragile and what is in the package."
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </form>
             </div>
             <div className="third-forms">
               <form action="post">
                 <h6>Weight (KG)</h6>
-                <input type="number" placeholder="Enter Weight" />
+                <input
+                  type="number"
+                  placeholder="Enter Weight"
+                  value={weight}
+                  onChange={(e) => setWeight(e.target.value)}
+                />
               </form>
               <form action="post">
                 <h6>Value (NGN)</h6>
-                <input type="number" placeholder="Estimated Value" />
+                <input
+                  type="number"
+                  placeholder="Estimated Value"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                />
               </form>
             </div>
             <div className="delivery">
               <h6>Delivery Service</h6>
               <div className="delivery-service">
-                <div className={`delivery-service-chosen ${
+                <div
+                  className={`delivery-service-chosen ${
                     selectedDelivery === "express" ? "chosen" : ""
                   }`}
-                  onClick={() => handleDeliveryClick("express")} >
+                  onClick={() => handleDeliveryClick("express")}
+                >
                   <img
                     src="/PS--Icon-Delivery-Truck.svg"
                     alt="delivery truck"
@@ -89,10 +194,12 @@ function Payment() {
                     <h5>We ship in 1-2 Hours</h5>
                   </section>
                 </div>
-                <div className={`delivery-service-chosen ${
+                <div
+                  className={`delivery-service-chosen ${
                     selectedDelivery === "standard" ? "chosen" : ""
                   }`}
-                  onClick={() => handleDeliveryClick("standard")} >
+                  onClick={() => handleDeliveryClick("standard")}
+                >
                   <img
                     src="/PS--Icon-Delivery-Truck.svg"
                     alt="delivery truck"
@@ -102,10 +209,12 @@ function Payment() {
                     <h5>We ship in 24 Hours</h5>
                   </section>
                 </div>
-                <div className={`delivery-service-chosen ${
+                <div
+                  className={`delivery-service-chosen ${
                     selectedDelivery === "interstate" ? "chosen" : ""
                   }`}
-                  onClick={() => handleDeliveryClick("interstate")} >
+                  onClick={() => handleDeliveryClick("interstate")}
+                >
                   <img
                     src="/PS--Icon-Delivery-Truck.svg"
                     alt="delivery truck"
@@ -120,15 +229,17 @@ function Payment() {
             <div className="estimated-price">
               <form action="post">
                 <h6>Estimated Price</h6>
-                <input type="text" />
+                <input type="text" value={estimatedPrice} readOnly />
               </form>
             </div>
             <div className="payment-options">
               <h6>Payment Options</h6>
-              <div onClick={() => handlePaymentClick("bankCard")} >
-                <span className={`payment-method-picked ${
+              <div onClick={() => handlePaymentClick("bankCard")}>
+                <span
+                  className={`payment-method-picked ${
                     selectedPayment === "bankCard" ? "picked" : ""
-                  }`}>
+                  }`}
+                >
                   <img src="/Tick-Mark--Green.svg" alt="tick" />
                 </span>
                 <section>
@@ -141,24 +252,31 @@ function Payment() {
                   <img src="/PS--Logo-Mastercard.svg" alt="Master card logo" />
                 </section>
               </div>
-              <div onClick={() => handlePaymentClick("bankTransfer")} >
-                <span className={`payment-method-picked ${
+              <div onClick={() => handlePaymentClick("bankTransfer")}>
+                <span
+                  className={`payment-method-picked ${
                     selectedPayment === "bankTransfer" ? "picked" : ""
-                  }`}>
+                  }`}
+                >
                   <img src="/Tick-Mark--Green.svg" alt="tick" />
                 </span>
                 <h4>Bank Transfer</h4>
               </div>
-              <div onClick={() => handlePaymentClick("cash")} >
-                <span className={`payment-method-picked ${
+              <div onClick={() => handlePaymentClick("cash")}>
+                <span
+                  className={`payment-method-picked ${
                     selectedPayment === "cash" ? "picked" : ""
-                  }`}>
+                  }`}
+                >
                   <img src="/Tick-Mark--Green.svg" alt="tick" />
                 </span>
                 <h4>Cash on Pickup / Delivery</h4>
               </div>
             </div>
-            <Link to="/Payment/PaymentInfo">
+            {errorMessage && (
+              <p className="text-red-600 text-sm">{errorMessage}</p>
+            )}
+            <Link to="/Payment/PaymentInfo" onClick={handleSubmit}>
               <button className="submit-first">Proceed</button>
             </Link>
           </div>
