@@ -9,7 +9,7 @@ function Book() {
     <>
       <Header />
       <div className="w-full h-full">
-        <div className="booking-banner">
+        <div className="payment-banner">
           <img
             src="/BP--Image-Dispatch-Rider-Web.svg"
             alt="background image of a rider"
@@ -26,7 +26,6 @@ function Book() {
             <h5 className="text-[0.7rem] sm:text-base text-[#DCFFFC] font-bold tracking-wide">
               Enjoy <span>20</span>% discount on your first booking.
             </h5>{" "}
-            {/* the use of span in this line is incase with time the discount percentage needs to be changes */}
           </div>
         </div>
 
