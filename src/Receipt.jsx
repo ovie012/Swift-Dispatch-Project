@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -62,7 +63,9 @@ function Receipt () {
                         <h4>Total</h4>
                         <h4>#10,050.00</h4>
                     </section>
-                    <button>Proceed</button>
+                    <Link to="/Payment/PaymentInfo">
+                        <button>Proceed</button>
+                    </Link>
                 </div>
             </main>
             <Footer />

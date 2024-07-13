@@ -2622,6 +2622,11 @@ button.ease-in-out:hover {
   .receipt-container section:nth-of-type(5) {
     font-size: 1.5rem;
   }
+
+  .receipt-container button {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 /* payment info page styling */
