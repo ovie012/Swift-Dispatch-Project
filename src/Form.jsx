@@ -69,7 +69,7 @@ const Form = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex form-input">
       <form className="bg-white rounded-lg w-full" onSubmit={handleSubmit}>
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">

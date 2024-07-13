@@ -1833,6 +1833,10 @@ footer {
   color: #fff;
 }
 
+.form-input input::placeholder {
+  font-size: 0.8rem;
+}
+
 .booking-banner-text h5 {
   word-spacing: 2px;
 }
@@ -1882,6 +1886,10 @@ button.ease-in-out:hover {
 
   .booking-banner-text {
     left: 12.5%;
+  }
+  
+  .form-input input::placeholder {
+    font-size: 0.65rem;
   }
 }
 
