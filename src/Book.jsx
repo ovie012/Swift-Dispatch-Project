@@ -11,7 +11,7 @@ function Book() {
       <div className="w-full h-full">
         <div className="booking-banner">
           <img
-            src="/BP--Image-Dispatch-Rider-Web.png"
+            src="/BP--Image-Dispatch-Rider-Web.svg"
             alt="background image of a rider"
           />
           <img

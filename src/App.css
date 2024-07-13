@@ -244,7 +244,6 @@ main {
 }
 
 @media only screen and (max-width:500px) {
-
   .logo img {
     width: 30px;
   }
@@ -408,6 +407,7 @@ footer {
   display: inline;
   width: 45px;
   margin-bottom: 5px;
+  filter: brightness(0%) saturate(0%) invert(91%);
 }
 
 .footer-logo div {
@@ -1813,7 +1813,7 @@ footer {
 /* book styling */
 .booking-banner {
   width: 100%;
-  height: 100dvh;
+  height: 90dvh;
   position: relative;
 
   /* overflow: hidden; */
@@ -1822,7 +1822,7 @@ footer {
 .booking-banner img {
   width: 100%;
   height: 100%;
-  background-size: contain;
+  /* background-size: contain; */
      
 }
 
@@ -1923,7 +1923,7 @@ button.ease-in-out:hover {
   outline: none;
   transition: box-shadow 0.2s ease-in-out;
   font-size: 0.8rem;
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .input-field:focus {
