@@ -124,10 +124,9 @@ const Form = () => {
               value={formValues.service}
               onChange={handleChange}
             >
-              <option value="">Select a service</option>
-              <option value="service1">Door-To-Door</option>
-              <option value="service2">Interstate Delivery</option>
-              <option value="service3">Distribution Delivery</option>
+              <option value="">Door-To-Door</option>
+              <option value="service1">Interstate Delivery</option>
+              <option value="service2">Distribution Delivery</option>
             </select>
             {errors.service && (
               <p className="error text-red-500 text-xs">{errors.service}</p>
@@ -227,6 +226,7 @@ const Form = () => {
           <textarea
             className="w-full px-2 lg:px-4 lg:py-3 py-3 border border-[#004039] rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 text-base"
             name="notes"
+            placeholder=" Give your instruction about the delivery."
             value={formValues.notes}
             onChange={handleChange}
           ></textarea>
