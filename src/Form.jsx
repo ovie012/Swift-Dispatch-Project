@@ -80,6 +80,7 @@ const Form = () => {
               name="name"
               value={formValues.name}
               onChange={handleChange}
+              placeholder="Chigozie Tosin"
             />
             {errors.name && <p className="error text-red-500 text-xs">{errors.name}</p>}
           </div>
@@ -91,6 +92,7 @@ const Form = () => {
               name="phoneNumber"
               value={formValues.phoneNumber}
               onChange={handleChange}
+              placeholder="+234 812 3456 789"
             />
             {errors.phoneNumber && (
               <p className="error text-red-500 text-xs">{errors.phoneNumber}</p>
@@ -106,6 +108,7 @@ const Form = () => {
               name="email"
               value={formValues.email}
               onChange={handleChange}
+              placeholder="ChigozieTosin@example.com"
             />
             {errors.email && (
               <p className="error text-red-500 text-xs">{errors.email}</p>
@@ -138,6 +141,7 @@ const Form = () => {
               name="pickupLocation"
               value={formValues.pickupLocation}
               onChange={handleChange}
+              placeholder="No 1 Mainland Off Island Road Lagos"
             />
             {errors.pickupLocation && (
               <p className="error text-red-500 text-xs">{errors.pickupLocation}</p>
@@ -151,6 +155,7 @@ const Form = () => {
               name="dropOffLocation"
               value={formValues.dropOffLocation}
               onChange={handleChange}
+              placeholder="No 1 Island Off Mainland Road Lagos"
             />
             {errors.dropOffLocation && (
               <p className="error text-red-500 text-xs">{errors.dropOffLocation}</p>
@@ -186,6 +191,7 @@ const Form = () => {
               name="receiverName"
               value={formValues.receiverName}
               onChange={handleChange}
+              placeholder="Tosin Chigozie"
             />
             {errors.receiverName && (
               <p className="error text-red-500 text-xs">{errors.receiverName}</p>
@@ -199,6 +205,7 @@ const Form = () => {
               name="receiverPhoneNumber"
               value={formValues.receiverPhoneNumber}
               onChange={handleChange}
+              placeholder="+234 901 2345 678"
             />
             {errors.receiverPhoneNumber && (
               <p className="error text-red-500 text-xs">{errors.receiverPhoneNumber}</p>
