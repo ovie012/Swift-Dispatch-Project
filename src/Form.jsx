@@ -81,7 +81,9 @@ const Form = () => {
               value={formValues.name}
               onChange={handleChange}
             />
-            {errors.name && <p className="error text-red-500 text-xs">{errors.name}</p>}
+            {errors.name && (
+              <p className="error text-red-500 text-xs">{errors.name}</p>
+            )}
           </div>
           <div className="mb-4 flex flex-col gap-2 w-full lg:w-[45%]">
             <label className="custom-label">Phone Number</label>
@@ -120,9 +122,9 @@ const Form = () => {
               onChange={handleChange}
             >
               <option value="">Select a service</option>
-              <option value="service1">Service 1</option>
-              <option value="service2">Service 2</option>
-              <option value="service3">Service 3</option>
+              <option value="service1"> Door-To-Door Delivery</option>
+              <option value="service2"> Interstate Delivery</option>
+              <option value="service3">Distribution Delivery</option>
             </select>
             {errors.service && (
               <p className="error text-red-500 text-xs">{errors.service}</p>
@@ -140,7 +142,9 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.pickupLocation && (
-              <p className="error text-red-500 text-xs">{errors.pickupLocation}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.pickupLocation}
+              </p>
             )}
           </div>
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
@@ -153,7 +157,9 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.dropOffLocation && (
-              <p className="error text-red-500 text-xs">{errors.dropOffLocation}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.dropOffLocation}
+              </p>
             )}
           </div>
         </div>
@@ -188,7 +194,9 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.receiverName && (
-              <p className="error text-red-500 text-xs">{errors.receiverName}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.receiverName}
+              </p>
             )}
           </div>
           <div className="mb-4 flex flex-col gap-2 lg:w-[45%] w-[47%]">
@@ -201,7 +209,9 @@ const Form = () => {
               onChange={handleChange}
             />
             {errors.receiverPhoneNumber && (
-              <p className="error text-red-500 text-xs">{errors.receiverPhoneNumber}</p>
+              <p className="error text-red-500 text-xs">
+                {errors.receiverPhoneNumber}
+              </p>
             )}
           </div>
         </div>
