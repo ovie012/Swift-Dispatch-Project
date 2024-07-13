@@ -33,13 +33,13 @@ function Payment() {
       let deliveryAmount = 0;
       switch (selectedDelivery) {
         case "express":
-          deliveryAmount = 10;
+          deliveryAmount = 10.70;
           break;
         case "standard":
-          deliveryAmount = 20;
+          deliveryAmount = 20.30;
           break;
         case "interstate":
-          deliveryAmount = 5;
+          deliveryAmount = 5.10;
           break;
         default:
           deliveryAmount = 0;
@@ -228,7 +228,7 @@ function Payment() {
             </div>
             <div className="estimated-price">
               <form action="post">
-                <h6>Estimated Price</h6>
+                <h6>Estimated Price (NGN)</h6>
                 <input type="text" value={estimatedPrice} readOnly />
               </form>
             </div>
@@ -276,7 +276,7 @@ function Payment() {
             {errorMessage && (
               <p className="text-red-600 text-sm">{errorMessage}</p>
             )}
-            <Link to="/Payment/PaymentInfo" onClick={handleSubmit}>
+            <Link to="/Receipt" onClick={handleSubmit}>
               <button className="submit-first">Proceed</button>
             </Link>
           </div>

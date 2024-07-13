@@ -9,6 +9,7 @@ import Report from "./Report.jsx";
 import Payment from "./Payment.jsx";
 import PaymentInfo from './PaymentInfo.jsx'
 import Track from "./Track.jsx";
+import Receipt from "./Receipt.jsx";
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/Track" element={<Track />} />
         <Route path="/Report" element={<Report />} />
         <Route path="/Payment" element={<Payment />} />
+        <Route path="/Receipt" element={<Receipt />} />
         <Route path="/Payment/PaymentInfo" element={<PaymentInfo />} />
         <Route path="/Book" element={<Book />} />
       </Routes>
