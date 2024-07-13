@@ -80,6 +80,7 @@ const Form = () => {
               name="name"
               value={formValues.name}
               onChange={handleChange}
+              placeholder="Chigozie Tosin"
             />
             {errors.name && (
               <p className="error text-red-500 text-xs">{errors.name}</p>
@@ -93,6 +94,7 @@ const Form = () => {
               name="phoneNumber"
               value={formValues.phoneNumber}
               onChange={handleChange}
+              placeholder="+234 812 3456 789"
             />
             {errors.phoneNumber && (
               <p className="error text-red-500 text-xs">{errors.phoneNumber}</p>
@@ -108,6 +110,7 @@ const Form = () => {
               name="email"
               value={formValues.email}
               onChange={handleChange}
+              placeholder="ChigozieTosin@example.com"
             />
             {errors.email && (
               <p className="error text-red-500 text-xs">{errors.email}</p>
@@ -122,8 +125,8 @@ const Form = () => {
               onChange={handleChange}
             >
               <option value="">Select a service</option>
-              <option value="service1"> Door-To-Door Delivery</option>
-              <option value="service2"> Interstate Delivery</option>
+              <option value="service1">Door-To-Door</option>
+              <option value="service2">Interstate Delivery</option>
               <option value="service3">Distribution Delivery</option>
             </select>
             {errors.service && (
@@ -140,6 +143,7 @@ const Form = () => {
               name="pickupLocation"
               value={formValues.pickupLocation}
               onChange={handleChange}
+              placeholder="No 1 Mainland Off Island Road Lagos"
             />
             {errors.pickupLocation && (
               <p className="error text-red-500 text-xs">
@@ -155,6 +159,7 @@ const Form = () => {
               name="dropOffLocation"
               value={formValues.dropOffLocation}
               onChange={handleChange}
+              placeholder="No 1 Island Off Mainland Road Lagos"
             />
             {errors.dropOffLocation && (
               <p className="error text-red-500 text-xs">
@@ -192,6 +197,7 @@ const Form = () => {
               name="receiverName"
               value={formValues.receiverName}
               onChange={handleChange}
+              placeholder="Tosin Chigozie"
             />
             {errors.receiverName && (
               <p className="error text-red-500 text-xs">
@@ -207,6 +213,7 @@ const Form = () => {
               name="receiverPhoneNumber"
               value={formValues.receiverPhoneNumber}
               onChange={handleChange}
+              placeholder="+234 901 2345 678"
             />
             {errors.receiverPhoneNumber && (
               <p className="error text-red-500 text-xs">
