@@ -10,6 +10,9 @@ import Payment from "./Payment.jsx";
 import PaymentInfo from './PaymentInfo.jsx'
 import Track from "./Track.jsx";
 import Receipt from "./Receipt.jsx";
+import Success from "./Success.jsx";
+import About from "./About.jsx";
+
 
 const App = () => {
 
@@ -17,6 +20,7 @@ const App = () => {
   return (
     <div>
       {/* <Header /> */}
+      
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/Track" element={<Track />} />
@@ -25,6 +29,8 @@ const App = () => {
         <Route path="/Receipt" element={<Receipt />} />
         <Route path="/Payment/PaymentInfo" element={<PaymentInfo />} />
         <Route path="/Book" element={<Book />} />
+        <Route path="/Success" element={<Success />} />
+        <Route path="/About" element={<About />} />
       </Routes>
       {/* <Footer /> */}
     </div>

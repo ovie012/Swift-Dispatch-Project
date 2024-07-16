@@ -8,8 +8,8 @@ function Book() {
   return (
     <>
       <Header />
-      <div className="w-full h-full">
-        <div className="payment-banner">
+      <div className="w-full h-full"> 
+        <div className="booking-banner">
           <img
             src="/BP--Image-Dispatch-Rider-Web.png"
             alt="background image of a rider"

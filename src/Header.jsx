@@ -43,25 +43,26 @@ function Header() {
       <header className={`${isScrolled ? "scrolled" : ""} ${getHeaderClass()}`}>
         <div className="header">
           <Link to="/">
-            <h2 className="logo"> <img src="/SD-Logo--Favicon.svg" alt="Swift Dispatch logo" /> SwiftDispatch</h2>
+            <h2 className="logo">
+              {" "}
+              <img src="/SD-Logo--Favicon.svg" alt="Swift Dispatch logo" />{" "}
+              SwiftDispatch
+            </h2>
           </Link>
           <nav className="nav">
-              <h3>
-                <NavLink to="/">
-                  Home
-                </NavLink>
-              </h3>
-              <h3>
-                <NavLink to="/Track">
-                  Track Order
-                </NavLink>
-              </h3>
-             
-              <h3>
-               <NavLink to="/Report">
-                 Report a Rider
-               </NavLink>
-              </h3>
+            <h3>
+              <NavLink to="/">Home</NavLink>
+            </h3>
+            <h3>
+              <NavLink to="/Track">Track Order</NavLink>
+            </h3>
+
+            <h3>
+              <NavLink to="/Report">Report a Rider</NavLink>
+            </h3>
+            <h3>
+              <NavLink to="/About">About us</NavLink>
+            </h3>
             <NavLink to="/Book">
               <button className="book-now">Book Now</button>
             </NavLink>
@@ -82,10 +83,14 @@ function Header() {
               <li>
                 <NavLink to="/Track">Track Order</NavLink>
               </li>
-             
+
               <li>
                 {" "}
                 <NavLink to="/Report">Report a Rider</NavLink>
+              </li>
+              <li>
+                {" "}
+                <NavLink to="/About">About Us</NavLink>
               </li>
               <NavLink to="/Book">
                 <button className="book-now mobile-book-now">Book Now</button>
