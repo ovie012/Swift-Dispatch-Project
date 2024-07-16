@@ -5,8 +5,7 @@ import Footer from "./Footer";
 function About() {
   return (
     <>
-      <Header />
-      <Footer />
+     <div className="text-7xl text-red font-extrabold flex items-center justify-center">Ovie can you see this?</div>
     </>
   );
 }
