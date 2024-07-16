@@ -54,14 +54,14 @@ function Header() {
               <NavLink to="/">Home</NavLink>
             </h3>
             <h3>
+              <NavLink to="/About">About us</NavLink>
+            </h3>
+            <h3>
               <NavLink to="/Track">Track Order</NavLink>
             </h3>
 
             <h3>
               <NavLink to="/Report">Report a Rider</NavLink>
-            </h3>
-            <h3>
-              <NavLink to="/About">About us</NavLink>
             </h3>
             <NavLink to="/Book">
               <button className="book-now">Book Now</button>
@@ -81,16 +81,16 @@ function Header() {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
+                {" "}
+                <NavLink to="/About">About Us</NavLink>
+              </li>
+              <li>
                 <NavLink to="/Track">Track Order</NavLink>
               </li>
 
               <li>
                 {" "}
                 <NavLink to="/Report">Report a Rider</NavLink>
-              </li>
-              <li>
-                {" "}
-                <NavLink to="/About">About Us</NavLink>
               </li>
               <NavLink to="/Book">
                 <button className="book-now mobile-book-now">Book Now</button>
