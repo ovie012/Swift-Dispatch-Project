@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// src/Payment.js
+import React, { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "./AppContext";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -14,6 +16,8 @@ function Payment() {
   const [weight, setWeight] = useState("");
   const [value, setValue] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+  const { setOrderDetails } = useContext(AppContext);
 
   const handlePaymentClick = (method) => {
     setSelectedPayment(method);
@@ -33,13 +37,13 @@ function Payment() {
       let deliveryAmount = 0;
       switch (selectedDelivery) {
         case "express":
-          deliveryAmount = 10.70;
+          deliveryAmount = 10.7;
           break;
         case "standard":
-          deliveryAmount = 20.30;
+          deliveryAmount = 20.3;
           break;
         case "interstate":
-          deliveryAmount = 5.10;
+          deliveryAmount = 5.1;
           break;
         default:
           deliveryAmount = 0;
@@ -51,8 +55,6 @@ function Payment() {
         price = 2000;
       } else if (price > 30000) {
         price = 30000;
-      } else {
-        price;
       }
 
       setEstimatedPrice(price.toFixed(2));
@@ -95,6 +97,20 @@ function Payment() {
       setErrorMessage(
         "Please fill in all fields and select a delivery service and payment option."
       );
+    } else {
+      console.log("Order details being set:", {
+        estimatedPrice,
+        deliveryLocation: destination,
+        deliveryService: selectedDelivery,
+      });
+
+      setOrderDetails({
+        estimatedPrice,
+        deliveryLocation: destination,
+        deliveryService: selectedDelivery,
+      });
+
+      navigate("/Receipt");
     }
   };
 
@@ -276,9 +292,9 @@ function Payment() {
             {errorMessage && (
               <p className="text-red-600 text-sm">{errorMessage}</p>
             )}
-            <Link to="/Receipt" onClick={handleSubmit}>
-              <button className="submit-first">Proceed</button>
-            </Link>
+            <button className="submit-first" onClick={handleSubmit}>
+              Proceed
+            </button>
           </div>
         </div>
       </main>

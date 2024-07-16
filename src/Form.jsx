@@ -124,7 +124,7 @@ const Form = () => {
               value={formValues.service}
               onChange={handleChange}
             >
-              <option value="">Select a service</option>
+              <option value="">Select Service</option>
               <option value="service1">Door-To-Door</option>
               <option value="service2">Interstate Delivery</option>
               <option value="service3">Distribution Delivery</option>

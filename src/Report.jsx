@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -18,6 +18,8 @@ function Report() {
     report: "",
   });
   const [errors, setErrors] = useState({});
+
+  const formRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,6 +51,10 @@ function Report() {
     }
   };
 
+  const scrollToForm = () => {
+    formRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <Header />
@@ -71,13 +77,12 @@ function Report() {
                 <br className="lg:block hidden" /> improve our services and
                 ensure a better experience for everyone.
               </h5>
-              <Link to="/Report">
-                <div className="mb-[50px]">
-                  <button className="text-[0.9rem] font-bold w-[150px] h-[45px] hover:bg-[#004039] text-[#004039] hover:text-white border border-1 border-[#004039] hover:border-white rounded-lg">
-                    Report a Rider
-                  </button>
-                </div>
-              </Link>
+              <button
+                onClick={scrollToForm}
+                className="text-[0.9rem] font-bold w-[150px] h-[45px] hover:bg-[#004039] text-[#004039] hover:text-white border border-1 border-[#004039] hover:border-white rounded-lg"
+              >
+                Report a Rider
+              </button>
             </div>
 
             <div className="lg:w-[50%] w-full flex items-center justify-center">
@@ -185,7 +190,7 @@ function Report() {
             </div>
           </div>
 
-          <div className="w-[90%] mx-auto">
+          <div className="w-[90%] mx-auto" ref={formRef}>
             <h1 className="text-[#004039] font-bold lg:text-4xl text-2xl">
               Start Your Report
             </h1>
@@ -223,7 +228,9 @@ function Report() {
                         onChange={handleChange}
                       />
                       {errors.riderId && (
-                        <p className="error text-red-500 text-xs">{errors.riderId}</p>
+                        <p className="error text-red-500 text-xs">
+                          {errors.riderId}
+                        </p>
                       )}
                     </div>
 
@@ -239,7 +246,9 @@ function Report() {
                         onChange={handleChange}
                       />
                       {errors.location && (
-                        <p className="error text-red-500 text-xs">{errors.location}</p>
+                        <p className="error text-red-500 text-xs">
+                          {errors.location}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -256,7 +265,9 @@ function Report() {
                       onChange={handleChange}
                     ></textarea>
                     {errors.report && (
-                      <p className="error text-red-500 text-xs">{errors.report}</p>
+                      <p className="error text-red-500 text-xs">
+                        {errors.report}
+                      </p>
                     )}
                   </div>
                 </div>
