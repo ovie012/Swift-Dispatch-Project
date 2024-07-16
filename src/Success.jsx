@@ -9,7 +9,7 @@ function Success() {
       <div className="min-h-screen flex flex-col items-center justify-center">
         <div className="flex flex-col items-center">
           <img
-            src="/public/Group 25.png"
+            src="/Group 25.png"
             alt="success"
             className="w-3/4 sm:w-1/2 lg:w-1/4"
           />

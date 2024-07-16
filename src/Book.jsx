@@ -8,13 +8,15 @@ function Book() {
   return (
     <>
       <Header />
-      <div className="w-full h-full"> 
-        <div className="booking-banner">
+      <div className="w-full h-full">
+        <div className="w-full lg:h-[90dvh] h-[60dvh] relative overflow-hidden ">
           <img
+            className="w-[100%] h-[100%] object-cover hidden lg:block rounded-b-[40px]"
             src="/BP--Image-Dispatch-Rider-Web.png"
             alt="background image of a rider"
           />
           <img
+            className="w-[100%] h-[100%] object-cover block lg:hidden"
             src="/BP--Image-Dispatch-Rider-Mobile.png"
             alt="background image of a rider"
           />
