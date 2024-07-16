@@ -124,9 +124,10 @@ const Form = () => {
               value={formValues.service}
               onChange={handleChange}
             >
-              <option value="">Door-To-Door</option>
-              <option value="service1">Interstate Delivery</option>
-              <option value="service2">Distribution Delivery</option>
+              <option value="">Select a service</option>
+              <option value="service1">Door-To-Door</option>
+              <option value="service2">Interstate Delivery</option>
+              <option value="service3">Distribution Delivery</option>
             </select>
             {errors.service && (
               <p className="error text-red-500 text-xs">{errors.service}</p>
