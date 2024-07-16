@@ -1,19 +1,21 @@
+// AppContext.js
 import React, { createContext, useState } from "react";
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
-const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
   const [orderDetails, setOrderDetails] = useState({
     estimatedPrice: 0,
     deliveryLocation: "",
     deliveryService: "",
   });
+  const [totalAmount, setTotalAmount] = useState(0);
 
   return (
-    <AppContext.Provider value={{ orderDetails, setOrderDetails }}>
+    <AppContext.Provider
+      value={{ orderDetails, setOrderDetails, totalAmount, setTotalAmount }}
+    >
       {children}
     </AppContext.Provider>
   );
 };
-
-export { AppContext, AppProvider };

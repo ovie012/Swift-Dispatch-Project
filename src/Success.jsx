@@ -11,7 +11,7 @@ function Success() {
           <img
             src="/Group 25.png"
             alt="success"
-            className="w-3/4 sm:w-1/2 lg:w-1/4"
+            className="w-2/4 sm:w-1/2 lg:w-1/4"
           />
           <p className="font-medium  text-center text-xl lg:text-3xl mt-4">
             Thank you, payment successful!
