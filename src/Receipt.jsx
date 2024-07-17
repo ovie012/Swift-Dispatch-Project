@@ -1,15 +1,20 @@
 // src/Receipt.js
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "./AppContext";
 import Header from "./Header";
 import Footer from "./Footer";
 
 function Receipt() {
-  const { orderDetails } = useContext(AppContext);
+  const { orderDetails, setTotalAmount } = useContext(AppContext);
   const { estimatedPrice, deliveryLocation, deliveryService } = orderDetails;
 
-    console.log("Received order details:", orderDetails);
+  const tax = 50;
+  const totalAmount = parseFloat(estimatedPrice) + tax;
+
+  useEffect(() => {
+    setTotalAmount(totalAmount);
+  }, [totalAmount, setTotalAmount]);
 
   return (
     <>
@@ -61,9 +66,7 @@ function Receipt() {
             <div>
               <h5>Delivery</h5>
               <h6>Address</h6>
-              <p>
-                {deliveryLocation}
-              </p>
+              <p>{deliveryLocation}</p>
             </div>
           </section>
           <span></span>
@@ -85,9 +88,7 @@ function Receipt() {
           <span></span>
           <section>
             <h4>Total</h4>
-            <h4>{`#${
-              (parseFloat(estimatedPrice) + 50).toFixed(2)
-            }`}</h4>
+            <h4>{`#${totalAmount.toFixed(2)}`}</h4>
           </section>
           <Link to="/Payment/PaymentInfo">
             <button>Proceed</button>
