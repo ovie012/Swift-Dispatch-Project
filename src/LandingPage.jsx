@@ -202,6 +202,7 @@ function LandingPage() {
               <img src="/LP--RTT-Web-Google-Map.png" alt="map" />
               <img src="/LP--RTT-Mobile-Google-Map.png" alt="map" />
               <form action="post">
+                <p className="enter-tracking-id">Enter your tracking ID.</p>
                 <input
                   className="tracking-id"
                   placeholder="Tracking ID"
