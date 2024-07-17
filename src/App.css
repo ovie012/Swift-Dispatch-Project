@@ -3602,6 +3602,10 @@ section.last-update-location p:nth-of-type(2) {
   margin-bottom: 15px;
 }
 
+.about-us-top h2:nth-of-type(2) {
+  display: none;
+}
+
 .about-us-top p {
   font-size: 1rem;
   color: hsla(0, 0%, 0%, 0.5);
@@ -3664,6 +3668,28 @@ section.last-update-location p:nth-of-type(2) {
   border: 1px solid #fff;
 }
 
+@media only screen and (max-width:500px) {
+
+  .about-us-top {
+    padding: 0 5% !important;
+  }
+
+  .about-us-top h2:nth-of-type(1) {
+    display: none;
+  }
+
+  .about-us-top h2:nth-of-type(2) {
+    display: block;
+    font-size: 1.5rem;
+    width: 80%;
+    margin-bottom: 5px;
+  }
+
+  .about-us-top p {
+    font-size: 0.8rem;
+  }
+}
+
 /* our section section */
 
 .our-section {
@@ -3716,6 +3742,10 @@ section.last-update-location p:nth-of-type(2) {
   text-transform: uppercase;
   /* word-spacing: 5px; */
   margin-bottom: 20px;
+}
+
+.our-section-text-one h4 span {
+  display: none;
 }
 
 .our-section-text-one h3,
@@ -3802,6 +3832,10 @@ section.last-update-location p:nth-of-type(2) {
   color: #2A9D90;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.for-mobile {
+  display: none;
 }
 
 @media only screen and (max-width:1200px) {
@@ -3912,5 +3946,172 @@ section.last-update-location p:nth-of-type(2) {
   
   .inner-our-section div h5 {
     font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .our-section-text-one h4 span {
+    display: inline;
+  }
+
+  .our-section section:nth-of-type(1) {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 400px
+  }
+
+  .our-section section:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  .our-section-images-one {
+    width: 70%;
+  }
+  
+  .our-section-images-one img {
+    width: 200px;
+  }
+  
+  .our-section-images-one img:nth-of-type(1) {
+    top: 210px;
+    left: -40px;
+  }
+  
+  .our-section-images-one img:nth-of-type(2) {
+    top: 310px;
+    right: -40px;
+  }
+  
+  .our-section-text-one {
+    width: 100%;
+  }
+  
+  .our-section-text-one h4,
+  .our-section-text-two h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .our-section-text-one h4 span {
+    display: none;
+  }
+  
+  .our-section-text-one h3,
+  .our-section-text-two h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .our-section-text-one ul li {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+    margin-left: 15px;
+  }
+  
+  .our-section-text-two ul {
+    margin-bottom: 50px;
+  }
+  
+  .our-section-text-two ul li {
+    font-size: 1rem;
+    margin-left: 7%;
+  }
+  
+  .our-section-text-two ul li::before {
+    left: -7%;
+    width: 10px;
+    height: 10px;
+  }
+
+  .our-section-images-two {
+    position: relative;
+  }
+
+  .our-section-images-two img {
+    width: 250px;
+    /* height: 270px; */
+    /* position: absolute; */
+  }
+
+  .our-section-images-two img:nth-of-type(1) {
+    margin-left: 10px;
+    /* position: absolute; */
+    z-index: 1 !important;
+  }
+
+  .our-section-images-two img:nth-of-type(2) {
+    display: block;
+    /* position: absolute; */
+    margin-top: -100px;
+    margin-left: 100px;
+    z-index: 10 !important;
+  }
+
+  .our-section section:nth-of-type(3) {
+    background: #fff;
+    padding-top: 50px;
+    width: 110%;
+    margin-left: -5%;
+    margin-bottom: -100px;
+  }
+  
+  .our-section section:nth-of-type(3) h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .our-section section:nth-of-type(3) p {
+    font-size: 1rem;
+    width: 100%;
+    margin-left: 0%;
+    margin-bottom: 70px;
+  }
+  
+  .inner-our-section {
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .inner-our-section div {
+    width: 40%;
+    position: relative;
+  }
+
+  .inner-our-section div:nth-of-type(3) {
+    margin-left: 30%;
+  }
+
+  .inner-our-section div img {
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 20px;
+  }
+  
+  .inner-our-section div h4 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .inner-our-section div h5 {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width:340px) {
+  
+  .our-section-images-one img:nth-of-type(1) {
+    top: 310px;
+  }
+  
+  .our-section-images-one img:nth-of-type(2) {
+    top: 410px;
+  }
+
+  .our-section-images-two img {
+    width: 180px;
   }
 }

@@ -9,6 +9,8 @@ function About() {
      <main>
       <div className="about-us-top">
         <h2>About</h2>
+        <h2>Satisfying Clients with
+        Fast Deliveries</h2>
         <p>We provide the best delivery service, 
           your go-to destination for fast and reliable  deliveries
         </p>
@@ -33,7 +35,7 @@ function About() {
             <img src="/Rectangle 464.svg" alt="smiling customer image" />
           </div>
           <div className="our-section-text-one">
-            <h4>our values</h4>
+            <h4>our <span>core</span> values</h4>
             <h3>At SwiftDispatch, we are committed to:</h3>
             <ul>
               <li>Providing a seamless delivery experience</li>
@@ -57,6 +59,7 @@ function About() {
           </div>
           <div className="our-section-images-two">
             <img src="/Rectangle 465.svg" alt="smiling customer image" />
+            <img src="/Rectangle 461.svg" alt="satisfied customer" className="for-mobile" />
           </div>
         </section>
         <section>
