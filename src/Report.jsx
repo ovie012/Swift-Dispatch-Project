@@ -221,7 +221,7 @@ function Report() {
                       <label className="custom-label">Rider's ID Number</label>
                       <input
                         type="text"
-                        placeholder="SD1176"
+                        placeholder="SD-1176"
                         className="input-field text-base"
                         name="riderId"
                         value={formValues.riderId}
@@ -305,7 +305,7 @@ function Report() {
                   </div>
                   <div className="flex items-center gap-3">
                     <img
-                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      src="/RAR--Icon-Charm-Circle-Tick.svg"
                       alt="tick"
                       width={20}
                       height={20}
@@ -314,7 +314,7 @@ function Report() {
                   </div>
                   <div className="flex items-center gap-3">
                     <img
-                      src="/public/RAR--Icon-Charm-Circle-Tick.svg"
+                      src="/RAR--Icon-Charm-Circle-Tick.svg"
                       alt="tick"
                       width={20}
                       height={20}

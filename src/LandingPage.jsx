@@ -205,7 +205,7 @@ function LandingPage() {
                 <p className="enter-tracking-id">Enter your tracking ID.</p>
                 <input
                   className="tracking-id"
-                  placeholder="Tracking ID"
+                  placeholder="#SD-12345"
                   type="text"
                   id="track"
                   name="track"
